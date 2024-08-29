@@ -32,6 +32,12 @@ dependencies:
   craco-antd:
     specifier: ^2.0.0
     version: 2.0.0(@craco/craco@7.1.0)(antd@5.20.3)(react-scripts@5.0.1)(webpack@5.94.0)
+  immer:
+    specifier: ^10.1.1
+    version: 10.1.1
+  localforage:
+    specifier: ^1.10.0
+    version: 1.10.0
   my-react-app:
     specifier: 'link:'
     version: 'link:'
@@ -6288,6 +6294,10 @@ packages:
     dev: false
     optional: true
 
+  /immediate@3.0.6:
+    resolution: {integrity: sha512-XXOFtyqDjNDAQxVfYxuF7g9Il/IbWmmlQg2MYKOH8ExIT1qg6xc4zyS3HaEEATgs1btfzxq15ciUiY7gjSXRGQ==, tarball: https://registry.npmmirror.com/immediate/-/immediate-3.0.6.tgz}
+    dev: false
+
   /immer@10.1.1:
     resolution: {integrity: sha512-s2MPrmjovJcoMaHtx6K11Ra7oD05NT97w1IC5zpMkT6Atjr7H8LjaDd81iIxUYpMKSRRNMJE703M1Fhr/TctHw==, tarball: https://registry.npmmirror.com/immer/-/immer-10.1.1.tgz}
     dev: false
@@ -7496,6 +7506,12 @@ packages:
       type-check: 0.4.0
     dev: false
 
+  /lie@3.1.1:
+    resolution: {integrity: sha512-RiNhHysUjhrDQntfYSfY4MU24coXXdEOgw9WGcKHNeEwffDYbF//u87M1EWaMGzuFoSbqW0C9C6lEEhDOAswfw==, tarball: https://registry.npmmirror.com/lie/-/lie-3.1.1.tgz}
+    dependencies:
+      immediate: 3.0.6
+    dev: false
+
   /lilconfig@2.1.0:
     resolution: {integrity: sha512-utWOt/GHzuUxnLKxB6dk81RoOeoNeHgbrXiuGk4yyF5qlRz+iIVWu56E2fqGHFrXz0QNUhLB/8nKqvRH66JKGQ==, tarball: https://registry.npmmirror.com/lilconfig/-/lilconfig-2.1.0.tgz}
     engines: {node: '>=10'}
@@ -7526,6 +7542,12 @@ packages:
   /loader-utils@3.3.1:
     resolution: {integrity: sha512-FMJTLMXfCLMLfJxcX9PFqX5qD88Z5MRGaZCVzfuqeZSPsyiBzs+pahDQjbIWz2QIzPZz0NX9Zy4FX3lmK6YHIg==, tarball: https://registry.npmmirror.com/loader-utils/-/loader-utils-3.3.1.tgz}
     engines: {node: '>= 12.13.0'}
+    dev: false
+
+  /localforage@1.10.0:
+    resolution: {integrity: sha512-14/H1aX7hzBBmmh7sGPd+AOMkkIrHM3Z1PAyGgZigA1H1p5O5ANnMyWzvpAETtG68/dC4pC0ncy3+PPGzXZHPg==, tarball: https://registry.npmmirror.com/localforage/-/localforage-1.10.0.tgz}
+    dependencies:
+      lie: 3.1.1
     dev: false
 
   /locate-path@3.0.0:
@@ -7817,7 +7839,7 @@ packages:
     requiresBuild: true
     dependencies:
       iconv-lite: 0.6.3
-      sax: 1.2.4
+      sax: 1.4.1
     dev: false
     optional: true
 
@@ -10179,6 +10201,12 @@ packages:
   /sax@1.2.4:
     resolution: {integrity: sha512-NqVDv9TpANUjFm0N8uM5GxL36UgKi9/atZw+x7YFnQ8ckwFGKrl4xX4yWtrey3UJm5nP1kUbnYgLopqWNSRhWw==, tarball: https://registry.npmmirror.com/sax/-/sax-1.2.4.tgz}
     dev: false
+
+  /sax@1.4.1:
+    resolution: {integrity: sha512-+aWOz7yVScEGoKNd4PA10LZ8sk0A/z5+nXQG5giUO5rprX9jgYsTdov9qCchZiPIZezbZH+jRut8nPodFAX4Jg==, tarball: https://registry.npmmirror.com/sax/-/sax-1.4.1.tgz}
+    requiresBuild: true
+    dev: false
+    optional: true
 
   /saxes@5.0.1:
     resolution: {integrity: sha512-5LBh1Tls8c9xgGjw3QrMwETmTMVk0oFgvrFSvWx62llR2hcEInrKNZ2GZCCuuy2lvWrdl5jhbpeqc5hRYKFOcw==, tarball: https://registry.npmmirror.com/saxes/-/saxes-5.0.1.tgz}
