@@ -1,7 +1,8 @@
 import React, { useState, memo } from 'react';
 
 // 此处如果加上memo,新增users的时候则其他UserItem组件不会render，
-// 此处如果不加memo,只要新增一个user，则所有的UserItem都会render，全部重新遍历，
+// 此处如果不加memo,只要新增一个user，则所有的UserItem都会render，全部重新遍历;
+// 最小粒度的组件
 const UserItem = memo(function UserItem({ user }: any) {
   console.log('UserItem is rendering');
   return (
