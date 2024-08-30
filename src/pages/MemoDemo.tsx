@@ -44,3 +44,11 @@ function MemoDemo() {
 }
 
 export default MemoDemo;
+
+/**
+ * 在这个例子中：
+ * UserItem 组件被memo包装，以避免不必要的重新渲染。
+ * 当点击“Add New User”按钮时，UsersList组件的users prop会发生变化，从而导致整个列表重新渲染。
+ * 然而，由于UserItem组件被memo包装，旧的用户项不会重新渲染，除非他们的数据实际上发生了变化。
+ * 这就是React.memo的基本用法和效果演示。通过这种方式，我们可以显著提高具有大量静态内容的列表和其他复杂UI的性能。
+ */
