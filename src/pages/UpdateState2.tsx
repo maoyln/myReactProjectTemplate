@@ -1,18 +1,45 @@
-import React, {useState} from 'react';
+import React, { useState, useRef, useEffect} from 'react';
+import { createPortal } from 'react-dom';
+import CreatePortalDom from './reactPortalDom';
+
 // 测试更新state是否刷新页面
 /**
  * useState 只要改变则会出发render，执行 useState 会触发 render。 
  * 这个与函数组件的state有所不同;参考对比组件<UpdateState />
  */
 
-
 const UpdateState2: React.FC = () => {
   const [text, setText] = useState<any>(1);
+  const spanRef = useRef(null);
+  const spanRef1: any = useRef(null);
 
+  useEffect(() => {
+    if (spanRef.current && spanRef1.current) {
+      // eslint-disable-next-line @typescript-eslint/no-unused-expressions
+      spanRef1.current.appendChild(spanRef.current)
+    }
+  }, []); // []可以尝试依赖text和spanRef.current，看下效果有什么不同
+
+  const CreatePortalRender = () => {
+    console.log(document.getElementById('root'));
+    return (
+      createPortal(
+        <div id='children' className="children">
+          孩子节点1
+        </div>,
+        document.getElementById('root') as any
+      )
+    );
+  }
+  
+  console.log(spanRef.current);
   console.log('render');
   return (
     <React.Fragment>
-      <p>{ text }</p>
+      <p ref={ spanRef }>{ text }</p>
+      <p ref={ spanRef1 }>{ text }</p>
+      {/* 下面代码会报错 */}
+      {/* <p ref={ spanRef }>{ spanRef.current }</p> */}
       <button
         onClick={() => {
           setText(1); // 这里并没有改变 a 的值.但是也做了更新
@@ -22,6 +49,12 @@ const UpdateState2: React.FC = () => {
       </button>
       <button onClick={() =>setText(null)}>useState null</button> 
       <button onClick={() => setText(text + 1)}>a+1</button>
+      {/* <button onClick={() => createPortalRender()}>createPortalRender</button> */}
+
+      <div id="father">
+        <CreatePortalDom />
+        <CreatePortalRender />
+      </div>
     </React.Fragment>
   );
 };
