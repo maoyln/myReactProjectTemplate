@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React from 'react';
 // 测试更新state是否刷新页面
 /**
  * setState 是 React 中最常用的命令，通常情况下，执行 setState 会触发 render。
