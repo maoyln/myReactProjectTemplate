@@ -1,6 +1,11 @@
 const CracoAntDesignPlugin = require('craco-antd');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
+  webpack: {
+    plugins: [new BundleAnalyzerPlugin()],
+  },
+  
   style: {
     postcss: {
       plugins: [
