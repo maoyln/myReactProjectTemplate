@@ -9,6 +9,7 @@ import AuthRoute from './components/AuthRoute';
 import UpdateState from './pages/UpdateState';
 import UpdateState2 from './pages/UpdateState2';
 import CreatePortalDom from './pages/reactPortalDom';
+import MemoDemo from './pages/MemoDemo';
 
 // 懒加载
 const Dashboard = React.lazy(() => import('./pages/Dashboard'));
@@ -29,6 +30,8 @@ const AppRoutes = () => (
       <Route path="/updateState" element={<UpdateState />} />
       <Route path="/updateState2" element={<UpdateState2 />} />
       <Route path="/reactPortalDom" element={<CreatePortalDom />} />
+      <Route path="/memoDemo" element={<MemoDemo />} />
+      
       
     </Routes>
   </Router>
