@@ -10,6 +10,11 @@ export default class UpdateState extends React.Component {
     a: 1
   };
 
+  // shouldComponentUpdate如果反馈false则不会更新render, 测试需要打开shouldComponentUpdate函数
+  // shouldComponentUpdate(nextProp: any) {
+  //   return false;
+  // }
+  
   render() {
     console.log("render");
     return (
