@@ -12,7 +12,7 @@ import CreatePortalDom from './pages/reactPortalDom';
 import UseMemoDemo from './pages/UseMemoDemo';
 import UseCallbackDemo from './pages/UseCallbackDemo';
 import UseMemoAndCallback from './pages/UseMemoAndCallback';
-
+import ContextMain from './pages/ContextDemo/ContextMain'
 
 // 懒加载
 const Dashboard = React.lazy(() => import('./pages/Dashboard'));
@@ -36,6 +36,7 @@ const AppRoutes = () => (
       <Route path="/useMemoDemo" element={<UseMemoDemo />} />
       <Route path="/useCallbackDemo" element={<UseCallbackDemo />} />
       <Route path="/useMemoAndCallback" element={<UseMemoAndCallback />} />
+      <Route path='/contextDemo' element={<ContextMain />}></Route>
     </Routes>
   </Router>
 );

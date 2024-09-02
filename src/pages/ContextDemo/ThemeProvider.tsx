@@ -19,7 +19,7 @@ export const ThemeProvider: React.FC<Props> = (props: Props) => {
   const { children } = props;
   const [theme, setTheme] = useState<Theme>('light');
   const toggleTheme = () => {
-    setTheme(theme === 'light' ? 'light' : 'dark');
+    setTheme(theme === 'light' ? 'dark' : 'light');
   }
   return <ThemeContext.Provider value={{ theme, toggleTheme }}>
     {children}
