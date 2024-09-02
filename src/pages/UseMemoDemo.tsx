@@ -9,7 +9,7 @@ const UseMemoDemo: React.FC = () => {
   const heavyComputation = useMemo(() => {
     console.log('Performing heavy computation');
     return Array.from({ length: 100000 }, (_, index) => index);
-  }, [value]);
+  }, [value]); // 此处不是正常写法，因为value没有在useMemo中变动，不需要使用改依赖
 
   return (
     <div>

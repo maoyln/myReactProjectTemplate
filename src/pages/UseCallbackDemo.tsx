@@ -8,7 +8,7 @@ const UseCallbackDemo: React.FC = () => {
   const callback = useCallback(() => {
     console.log('Callback called');
     setCount(count + 1)
-  }, []);
+  }, []); // 此处不是正常写法，因为count有变动使用的useCallback没有依赖count而触发
 
   return (
     <div>
