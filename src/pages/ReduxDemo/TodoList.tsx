@@ -15,7 +15,7 @@ const TodoList: React.FC = () => {
   const handleSubmit = () => {
     if (value !== '') {
       // 如果输入框不为空，分发 addTodo 动作，然后清空输入框
-      dispatch(addTodo(value));
+      dispatch(addTodo(value) as any);
       setValue('');
     }
   };

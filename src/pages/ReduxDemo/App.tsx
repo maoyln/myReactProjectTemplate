@@ -4,8 +4,8 @@ import { Provider } from 'react-redux';
 import store from './store';
 import TodoList from './TodoList';
 
-// 定义 App 组件，使用 Provider 包装整个应用，使其可以访问 store
-const App: React.FC = () => {
+// 定义 ReduxDemo 组件，使用 Provider 包装整个应用，使其可以访问 store
+const ReduxDemo: React.FC = () => {
   return (
     <Provider store={store}>
       <TodoList />
@@ -13,5 +13,5 @@ const App: React.FC = () => {
   );
 };
 
-// 导出 App 组件
-export default App;
+// 导出 ReduxDemo 组件
+export default ReduxDemo;
