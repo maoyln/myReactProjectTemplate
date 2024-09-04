@@ -15,6 +15,12 @@ class UpdateState extends React.Component {
   //   return false;
   // }
 
+  // constructor(props: any) {
+  //   super(props);
+  //   // 不要在构造函数中调用 setState，可以直接给 state 设置初始值
+  // }
+
+
   render() {
     console.log("render");
     return (
