@@ -1,5 +1,5 @@
-import { ADD_TODO, AddTodoAction } from './actions';
-import { AppState, Todo, addTodo } from './types';
+import { ADD_TODO, AddTodoAction, addTodo } from './actions';
+import { AppState, Todo,  } from './types';
 import { combineReducers } from 'redux';
 
 const todosReducer = (state: AppState['todos'] = [], action: AddTodoAction): Todo[] => {
