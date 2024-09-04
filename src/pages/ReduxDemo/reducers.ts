@@ -1,4 +1,4 @@
-import { ADD_TODO, AddTodoAction, addTodo } from './actions';
+import { ADD_TODO, AddTodoAction } from './actions';
 import { AppState, Todo,  } from './types';
 import { combineReducers } from 'redux';
 
