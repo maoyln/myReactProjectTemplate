@@ -8,13 +8,14 @@ import AuthRoute from './components/AuthRoute';
 
 import UpdateState from './pages/UpdateState';
 import UpdateState2 from './pages/UpdateState2';
-import CreatePortalDom from './pages/reactPortalDom';
-import UseMemoDemo from './pages/UseMemoDemo';
-import UseCallbackDemo from './pages/UseCallbackDemo';
-import UseMemoAndCallback from './pages/UseMemoAndCallback';
-import ContextMain from './pages/ContextDemo/ContextMain'
-import ForwardRefDemo from './pages/ForwardRefDemo'
-import ReduxDemo from './pages/ReduxDemo/App'
+import CreatePortalDom from './pages/reactPortalDom'; // CreatePortal
+import UseMemoDemo from './pages/UseMemoDemo'; // UseMemo
+import UseCallbackDemo from './pages/UseCallbackDemo'; // UseCallbackDemo
+import UseMemoAndCallback from './pages/UseMemoAndCallback'; // UseMemoAndCallback
+import ContextMain from './pages/ContextDemo/ContextMain' // Context
+import ForwardRefDemo from './pages/ForwardRefDemo' // ForwardRef
+import ReduxDemo from './pages/ReduxDemo/App' // Redux
+import DemoComponent from './pages/SubscribePublish/DemoComponent' // 发布订阅
 
 // 懒加载
 const Dashboard = React.lazy(() => import('./pages/Dashboard'));
@@ -41,6 +42,7 @@ const AppRoutes = () => (
       <Route path='/contextDemo' element={<ContextMain />}></Route>
       <Route path='/forwardRefDemo' element={<ForwardRefDemo />}></Route>
       <Route path='/reduxDemo' element={<ReduxDemo />}></Route>
+      <Route path='/demoComponent' element={<DemoComponent />}></Route>
       
     </Routes>
   </Router>
