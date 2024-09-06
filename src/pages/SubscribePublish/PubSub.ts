@@ -1,4 +1,3 @@
-// utils/PubSub.ts
 class PubSub {
   private _topics: { [key: string]: Function[] } = {};
 
