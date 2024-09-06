@@ -15,7 +15,7 @@ import UseMemoAndCallback from './pages/UseMemoAndCallback'; // UseMemoAndCallba
 import ContextMain from './pages/ContextDemo/ContextMain' // Context
 import ForwardRefDemo from './pages/ForwardRefDemo' // ForwardRef
 import ReduxDemo from './pages/ReduxDemo/App' // Redux
-import DemoComponent from './pages/SubscribePublish/DemoComponent' // 发布订阅
+import PubSubAppDemo from './pages/SubscribePublish/PubSubAppDemo' // 发布订阅
 
 // 懒加载
 const Dashboard = React.lazy(() => import('./pages/Dashboard'));
@@ -42,7 +42,7 @@ const AppRoutes = () => (
       <Route path='/contextDemo' element={<ContextMain />}></Route>
       <Route path='/forwardRefDemo' element={<ForwardRefDemo />}></Route>
       <Route path='/reduxDemo' element={<ReduxDemo />}></Route>
-      <Route path='/demoComponent' element={<DemoComponent />}></Route>
+      <Route path='/pubSubAppDemo' element={<PubSubAppDemo />}></Route>
       
     </Routes>
   </Router>
