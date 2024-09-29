@@ -16,6 +16,8 @@ import ContextMain from './pages/ContextDemo/ContextMain' // Context
 import ForwardRefDemo from './pages/ForwardRefDemo' // ForwardRef
 import ReduxDemo from './pages/ReduxDemo/App' // Redux
 import PubSubAppDemo from './pages/SubscribePublish/PubSubAppDemo' // 发布订阅
+import UseLayoutEffectDemo from './pages/UseLayoutEffectDemo/UseLayoutEffectDemo'; // useEffect 与 useLayoutEffect区别
+import TableMy from './pages/TableMy' //
 
 // 懒加载
 const Dashboard = React.lazy(() => import('./pages/Dashboard'));
@@ -43,6 +45,9 @@ const AppRoutes = () => (
       <Route path='/forwardRefDemo' element={<ForwardRefDemo />}></Route>
       <Route path='/reduxDemo' element={<ReduxDemo />}></Route>
       <Route path='/pubSubAppDemo' element={<PubSubAppDemo />}></Route>
+      <Route path='/tableMy' element={<TableMy />}></Route>
+      <Route path='/useLayoutEffectDemo' element={<UseLayoutEffectDemo />}></Route>
+      
       
     </Routes>
   </Router>
