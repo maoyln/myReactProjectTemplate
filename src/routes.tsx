@@ -17,6 +17,9 @@ import ForwardRefDemo from './pages/ForwardRefDemo' // ForwardRef
 import ReduxDemo from './pages/ReduxDemo/App' // Redux
 import PubSubAppDemo from './pages/SubscribePublish/PubSubAppDemo' // 发布订阅
 import UseLayoutEffectDemo from './pages/UseLayoutEffectDemo/UseLayoutEffectDemo'; // useEffect 与 useLayoutEffect区别
+import ReactHooksErrorFunction from './pages/ReactHooksError/ReactHooksErrorFunction' // 发布订阅
+import ReactHooksErrorClass from './pages/ReactHooksError/ReactHooksErrorClass' // 发布订阅
+
 import TableMy from './pages/TableMy' //
 
 // 懒加载
@@ -47,6 +50,8 @@ const AppRoutes = () => (
       <Route path='/pubSubAppDemo' element={<PubSubAppDemo />}></Route>
       <Route path='/tableMy' element={<TableMy />}></Route>
       <Route path='/useLayoutEffectDemo' element={<UseLayoutEffectDemo />}></Route>
+      <Route path='/reactHooksErrorFunction' element={<ReactHooksErrorFunction />}></Route>
+      <Route path='/reactHooksErrorClass' element={<ReactHooksErrorClass />}></Route>
       
       
     </Routes>
