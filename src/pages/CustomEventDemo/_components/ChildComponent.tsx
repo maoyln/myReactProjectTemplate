@@ -1,8 +1,9 @@
 import React from 'react';
+import { CustomEventMessageType } from '../types'
 
 const ChildComponent: React.FC = () => {
   const sendMessage = () => {
-    const customEvent = new CustomEvent('customMessage', {
+    const customEvent = new CustomEvent(CustomEventMessageType.MyEventMessageType, {
       detail: {
         message: Math.random()
       }

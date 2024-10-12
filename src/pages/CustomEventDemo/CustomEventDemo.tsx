@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import ChildComponent from './_components/ChildComponent';
 import  useCustomEvent  from './useCustomEvent';
-
+import { CustomEventMessageType } from './types'
 interface Props {}
 const ParentComponent: React.FC<Props> = () => {
   const [message, setMessage] = useState<string>('空数据')
@@ -10,7 +10,7 @@ const ParentComponent: React.FC<Props> = () => {
     setMessage(event.detail.message)
   };
 
-  useCustomEvent('customMessage', handleCustomMessage);
+  useCustomEvent(CustomEventMessageType.MyEventMessageType, handleCustomMessage);
 
   return (
     <div>
