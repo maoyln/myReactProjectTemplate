@@ -19,6 +19,7 @@ import PubSubAppDemo from './pages/SubscribePublish/PubSubAppDemo' // 发布订�
 import UseLayoutEffectDemo from './pages/UseLayoutEffectDemo/UseLayoutEffectDemo'; // useEffect 与 useLayoutEffect区别
 import ReactHooksErrorFunction from './pages/ReactHooksError/ReactHooksErrorFunction' // 发布订阅
 import ReactHooksErrorClass from './pages/ReactHooksError/ReactHooksErrorClass' // 发布订阅
+import CustomEventDemo from './pages/CustomEventDemo/CustomEventDemo' // CustomEvent的使用说明及示例
 
 import TableMy from './pages/TableMy' //
 
@@ -52,6 +53,7 @@ const AppRoutes = () => (
       <Route path='/useLayoutEffectDemo' element={<UseLayoutEffectDemo />}></Route>
       <Route path='/reactHooksErrorFunction' element={<ReactHooksErrorFunction />}></Route>
       <Route path='/reactHooksErrorClass' element={<ReactHooksErrorClass />}></Route>
+      <Route path='/customEventDemo' element={<CustomEventDemo />}></Route>
       
       
     </Routes>

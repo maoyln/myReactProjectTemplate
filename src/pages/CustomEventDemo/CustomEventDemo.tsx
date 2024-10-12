@@ -1,9 +1,24 @@
-import React from 'react';
+import React, {useState} from 'react';
+import ChildComponent from './_components/ChildComponent';
+import  useCustomEvent  from './useCustomEvent';
 
 interface Props {}
+const ParentComponent: React.FC<Props> = () => {
+  const [message, setMessage] = useState<string>('空数据')
+  const handleCustomMessage = (event: CustomEvent<{ message: string }>) => {
+    console.log('Received message from child:', event.detail.message);
+    setMessage(event.detail.message)
+  };
 
-const CustomEventDemo: React.FC<Props> = (props) => {
-  return <div></div>
-}
+  useCustomEvent('customMessage', handleCustomMessage);
 
-export default CustomEventDemo;
+  return (
+    <div>
+      <h1>Parent Component</h1>
+      <div>子组件发出的信号: {message}</div>
+      <ChildComponent />
+    </div>
+  );
+};
+
+export default ParentComponent;
