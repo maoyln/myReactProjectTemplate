@@ -1,5 +1,6 @@
 import React from 'react';
 import { CustomEventMessageType } from '../types'
+import { emitCustomEvent } from '../EmitCustomEvent'
 
 const ChildComponent: React.FC = () => {
   const sendMessage = () => {
@@ -9,7 +10,13 @@ const ChildComponent: React.FC = () => {
       }
     });
     window.dispatchEvent(customEvent);
+
+    emitCustomEvent(CustomEventMessageType.MyEventMessageType, {
+      message: Math.random()
+    });
   };
+
+
 
   return (
     <div>
