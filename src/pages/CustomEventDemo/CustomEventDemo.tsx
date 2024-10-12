@@ -15,7 +15,7 @@ const ParentComponent: React.FC<Props> = () => {
   return (
     <div>
       <h1>Parent Component</h1>
-      <div>子组件发出的信号: {message}</div>
+      <div>子组件发出的信息: {message}</div>
       <ChildComponent />
     </div>
   );
