@@ -20,7 +20,8 @@ import UseLayoutEffectDemo from './pages/UseLayoutEffectDemo/UseLayoutEffectDemo
 import ReactHooksErrorFunction from './pages/ReactHooksError/ReactHooksErrorFunction' // 发布订阅
 import ReactHooksErrorClass from './pages/ReactHooksError/ReactHooksErrorClass' // 发布订阅
 import CustomEventDemo from './pages/CustomEventDemo/CustomEventDemo' // CustomEvent的使用说明及示例
-
+import CustomTable from './pages/CustomTable/CustomTable' // 动态表格+mock数据
+import TextOverflow from './pages/TextOverflow/TextOverflow'; // 测试文字超出显示... 全局配置显示Iip
 import TableMy from './pages/TableMy' //
 
 // 懒加载
@@ -54,6 +55,8 @@ const AppRoutes = () => (
       <Route path='/reactHooksErrorFunction' element={<ReactHooksErrorFunction />}></Route>
       <Route path='/reactHooksErrorClass' element={<ReactHooksErrorClass />}></Route>
       <Route path='/customEventDemo' element={<CustomEventDemo />}></Route>
+      <Route path='/customTable' element={<CustomTable />}></Route>
+      <Route path='/textOverflow' element={<TextOverflow />}></Route>
       
       
     </Routes>
