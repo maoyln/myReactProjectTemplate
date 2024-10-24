@@ -21,8 +21,9 @@ import ReactHooksErrorFunction from './pages/ReactHooksError/ReactHooksErrorFunc
 import ReactHooksErrorClass from './pages/ReactHooksError/ReactHooksErrorClass' // 发布订阅
 import CustomEventDemo from './pages/CustomEventDemo/CustomEventDemo' // CustomEvent的使用说明及示例
 import CustomTable from './pages/CustomTable/CustomTable' // 动态表格+mock数据
+import TableMy from './pages/TableMy' // 我的表格
 import TextOverflow from './pages/TextOverflow/TextOverflow'; // 测试文字超出显示... 全局配置显示Iip
-import TableMy from './pages/TableMy' //
+import LazyLoadingDemo from './pages/LazyLoadingDemo'; // 懒加载
 
 // 懒加载
 const Dashboard = React.lazy(() => import('./pages/Dashboard'));
@@ -57,7 +58,7 @@ const AppRoutes = () => (
       <Route path='/customEventDemo' element={<CustomEventDemo />}></Route>
       <Route path='/customTable' element={<CustomTable />}></Route>
       <Route path='/textOverflow' element={<TextOverflow />}></Route>
-      
+      <Route path='/lazyLoadingDemo' element={<LazyLoadingDemo />}></Route>
       
     </Routes>
   </Router>
