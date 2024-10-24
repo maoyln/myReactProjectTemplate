@@ -23,7 +23,9 @@ import CustomEventDemo from './pages/CustomEventDemo/CustomEventDemo' // CustomE
 import CustomTable from './pages/CustomTable/CustomTable' // 动态表格+mock数据
 import TableMy from './pages/TableMy' // 我的表格
 import TextOverflow from './pages/TextOverflow/TextOverflow'; // 测试文字超出显示... 全局配置显示Iip
-import LazyLoadingDemo from './pages/LazyLoadingDemo'; // 懒加载
+import LazyLoadingDemo from './pages/LazyLoadingDemo'; // 文件懒加载
+import IntersectionObserverDemo from './pages/IntersectionObserverDemo'; // 图片懒加载
+
 
 // 懒加载
 const Dashboard = React.lazy(() => import('./pages/Dashboard'));
@@ -59,6 +61,7 @@ const AppRoutes = () => (
       <Route path='/customTable' element={<CustomTable />}></Route>
       <Route path='/textOverflow' element={<TextOverflow />}></Route>
       <Route path='/lazyLoadingDemo' element={<LazyLoadingDemo />}></Route>
+      <Route path='/intersectionObserverDemo' element={<IntersectionObserverDemo />}></Route>
       
     </Routes>
   </Router>

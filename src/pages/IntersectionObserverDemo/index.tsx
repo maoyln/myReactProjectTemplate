@@ -15,7 +15,7 @@ const IntersectionObserverDemo: React.FC = () => {
           text="这是第一张图片的描述内容。"
         />
         <LazyComponent
-          imgSrc="hhttps://cdn.jsdelivr.net/gh/maoyln/maoyl-img/blog/20220922171036.png"
+          imgSrc="https://cdn.jsdelivr.net/gh/maoyln/maoyl-img/blog/20220922171036.png"
           text="这是第二张图片的描述内容。"
         />
         <LazyComponent
