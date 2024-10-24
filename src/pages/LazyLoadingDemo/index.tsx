@@ -9,7 +9,7 @@ const NewsSection = React.lazy(() => import('./components/NewsSection'));
 const ProductSection = React.lazy(() => import('./components/ProductSection'));
 const ContactSection = React.lazy(() => import('./components/ContactSection'));
 
-const App: React.FC = () => {
+const LazyLoadingDemo: React.FC = () => {
   return (
     <div>
       <Header />
@@ -36,4 +36,4 @@ const App: React.FC = () => {
   );
 };
 
-export default App;
+export default LazyLoadingDemo;
