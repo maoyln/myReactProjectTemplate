@@ -21,7 +21,7 @@ const LazyComponent: React.FC<LazyComponentProps> = ({ imgSrc, text }) => {
         });
       },
       {
-        threshold: 0.1, // 只有10%进入视口时触发
+        threshold: 0.5, // 只有10%进入视口时触发
       }
     );
 
