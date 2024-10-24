@@ -26,6 +26,62 @@ const IntersectionObserverDemo: React.FC = () => {
           imgSrc="https://cdn.jsdelivr.net/gh/maoyln/maoyl-img/blog/my-head.jpeg"
           text="这是第四张图片的描述内容。"
         />
+        <LazyComponent
+          imgSrc="https://cdn.jsdelivr.net/gh/maoyln/maoyl-img/blog/20200204143633.png"
+          text="这是第四张图片的描述内容。"
+        />
+        <LazyComponent
+          imgSrc="https://cdn.jsdelivr.net/gh/maoyln/maoyl-img/blog/20200906154330.png"
+          text="这是第四张图片的描述内容。"
+        />
+        <LazyComponent
+          imgSrc="https://cdn.jsdelivr.net/gh/maoyln/maoyl-img/blog/20220812144418.png"
+          text="这是第四张图片的描述内容。"
+        />
+        <LazyComponent
+          imgSrc="https://cdn.jsdelivr.net/gh/maoyln/maoyl-img/blog/Aug-14-2022%2000-26-27.gif"
+          text="这是第四张图片的描述内容。"
+        />
+        <LazyComponent
+          imgSrc="https://cdn.jsdelivr.net/gh/maoyln/maoyl-img/blog/20200716105750.jpg"
+          text="这是第四张图片的描述内容。"
+        />
+        <LazyComponent
+          imgSrc="https://cdn.jsdelivr.net/gh/maoyln/maoyl-img/blog/20200716105748.jpg"
+          text="这是第四张图片的描述内容。"
+        />
+        <LazyComponent
+          imgSrc="https://cdn.jsdelivr.net/gh/maoyln/maoyl-img/blog/20200716105753.jpg"
+          text="这是第四张图片的描述内容。"
+        />
+        <LazyComponent
+          imgSrc="https://cdn.jsdelivr.net/gh/maoyln/maoyl-img/blog/20200716105747.jpg"
+          text="这是第四张图片的描述内容。"
+        />
+        <LazyComponent
+          imgSrc="https://cdn.jsdelivr.net/gh/maoyln/maoyl-img/blog/20200716105752.jpg"
+          text="这是第四张图片的描述内容。"
+        />
+        <LazyComponent
+          imgSrc="https://cdn.jsdelivr.net/gh/maoyln/maoyl-img/blog/5311723267415_.pic.jpg"
+          text="这是第四张图片的描述内容。"
+        />
+        <LazyComponent
+          imgSrc="https://cdn.jsdelivr.net/gh/maoyln/maoyl-img/blog/20200906152315.jpg"
+          text="这是第四张图片的描述内容。"
+        />
+        <LazyComponent
+          imgSrc="https://cdn.jsdelivr.net/gh/maoyln/maoyl-img/blog/20200716105751.jpg"
+          text="这是第四张图片的描述内容。"
+        />
+        <LazyComponent
+          imgSrc="https://cdn.jsdelivr.net/gh/maoyln/maoyl-img/blog/20200716105746.jpg"
+          text="这是第四张图片的描述内容。"
+        />
+        <LazyComponent
+          imgSrc="https://cdn.jsdelivr.net/gh/maoyln/maoyl-img/blog/20200716105745.jpg"
+          text="这是第四张图片的描述内容。"
+        />
       </div>
 
       <Footer />
