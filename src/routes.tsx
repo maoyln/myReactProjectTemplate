@@ -21,7 +21,9 @@ import ReactHooksErrorFunction from './pages/ReactHooksError/ReactHooksErrorFunc
 import ReactHooksErrorClass from './pages/ReactHooksError/ReactHooksErrorClass' // 发布订阅
 import CustomEventDemo from './pages/CustomEventDemo/CustomEventDemo' // CustomEvent的使用说明及示例
 import CustomTable from './pages/CustomTable/CustomTable' // 动态表格+mock数据
-import CustomTreeTable from './pages/CustomTreeTable/CustomTreeTable' // 动态表格+mock数据
+import CustomTreeTable from './pages/CustomTreeTable/CustomTreeTable' // 动态树形表格+mock数据
+import CustomLazyTreeTable from './pages/CustomLazyTreeTable/CustomLazyTreeTable' // 动态树形表格+mock数据懒加载
+
 import TableMy from './pages/TableMy' // 我的表格
 import TextOverflow from './pages/TextOverflow/TextOverflow'; // 测试文字超出显示... 全局配置显示Iip
 import LazyLoadingDemo from './pages/LazyLoadingDemo'; // 文件懒加载
@@ -64,6 +66,7 @@ const AppRoutes = () => (
       <Route path='/textOverflow' element={<TextOverflow />}></Route>
       <Route path='/lazyLoadingDemo' element={<LazyLoadingDemo />}></Route>
       <Route path='/intersectionObserverDemo' element={<IntersectionObserverDemo />}></Route>
+      <Route path='/customLazyTreeTable' element={<CustomLazyTreeTable />}></Route>
       
     </Routes>
   </Router>
