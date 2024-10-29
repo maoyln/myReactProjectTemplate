@@ -29,6 +29,7 @@ import TextOverflow from './pages/TextOverflow/TextOverflow'; // 测试文字超
 import LazyLoadingDemo from './pages/LazyLoadingDemo'; // 文件懒加载
 import IntersectionObserverDemo from './pages/IntersectionObserverDemo'; // 图片懒加载
 import LazyLoadPicture from './pages/LazyLoadPicture/LazyLoadPicture'; // 图片懒加载
+import DocumentFragmentDemo from './pages/DocumentFragmentDemo/DocumentFragmentDemo'; // DocumentFragment 是一个轻量级的文档对象
 
 
 // 懒加载
@@ -69,6 +70,7 @@ const AppRoutes = () => (
       <Route path='/intersectionObserverDemo' element={<IntersectionObserverDemo />}></Route>
       <Route path='/customLazyTreeTable' element={<CustomLazyTreeTable />}></Route>
       <Route path='/lazyLoadPicture' element={<LazyLoadPicture />}></Route>
+      <Route path='/documentFragmentDemo' element={<DocumentFragmentDemo />}></Route>
       
     </Routes>
   </Router>
