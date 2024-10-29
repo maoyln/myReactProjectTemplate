@@ -14,7 +14,7 @@ const LazyLoadImages: React.FC = () => {
         setTimeout(() => {
           // 注意⚠️： 该定时器是模拟网络请求的消耗时间，实际操作的时候一定要去掉
           img.src = img.getAttribute("data-src") || "";
-        }, 100);
+        }, 300);
       }
     });
   };
