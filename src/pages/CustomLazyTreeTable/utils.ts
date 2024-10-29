@@ -1,11 +1,36 @@
-import { DataNode } from './generateMockData';
+import { DataNode, workingPointTree } from "./generateMockData";
+
+/**
+ * 获取动态数据
+ * @param key
+ * @returns
+ */
+export const handleFetchData = (key?: string): Promise<DataNode> => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      const currentData = workingPointTree.find((item) => item.key === key);
+      let data: DataNode = {
+        key: "",
+        children: []
+      };
+      if (currentData) {
+        data = { ...currentData };
+      }
+      resolve(data);
+    }, 500);
+  });
+};
+
 /**
  * 根据节点 ID 查找其所有的子节点和孙节点的 ID
  * @param nodes - 树状数据节点
  * @param targetId - 要查找的节点 ID
  * @returns - 找到的所有子节点和孙节点的 ID
  */
-export const findAllChildIds = (nodes: DataNode[], targetId: string): string[] => {
+export const findAllChildIds = (
+  nodes: DataNode[],
+  targetId: string
+): string[] => {
   let result: string[] = [];
 
   const findChildren = (currentNodes: DataNode[]) => {

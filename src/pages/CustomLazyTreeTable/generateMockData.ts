@@ -200,6 +200,10 @@ export const workingPointTree: DataNode[] = [
             typeName: "部位",
             HPP456_design: "122",
             HPP456_actual: "666",
+            HPP123_design: '1212',
+            HPP123_actual: '1212',
+            HPP555_design: '555',
+            HPP555_actual: '555',
             C25_design: "300",
             C25_actual: "250",
             PO425_design: "400",
@@ -211,10 +215,14 @@ export const workingPointTree: DataNode[] = [
             typeName: "部位",
             HPP456_design: "122",
             HPP456_actual: "666",
-            C25_design: "200",
-            C25_actual: "150",
-            PO425_design: "300",
-            PO425_actual: "250",
+            HPP123_design: '1212',
+            HPP123_actual: '1212',
+            HPP555_design: '555',
+            HPP555_actual: '555',
+            C25_design: "300",
+            C25_actual: "250",
+            PO425_design: "400",
+            PO425_actual: "350",
           },
         ],
       },
@@ -237,10 +245,14 @@ export const workingPointTree: DataNode[] = [
             typeName: "部位",
             HPP456_design: "122",
             HPP456_actual: "666",
-            C25_design: "100",
-            C25_actual: "90",
-            PO425_design: "200",
-            PO425_actual: "180",
+            HPP123_design: '1212',
+            HPP123_actual: '1212',
+            HPP555_design: '555',
+            HPP555_actual: '555',
+            C25_design: "300",
+            C25_actual: "250",
+            PO425_design: "400",
+            PO425_actual: "350",
           },
           {
             key: `2-1-2`,
@@ -248,10 +260,14 @@ export const workingPointTree: DataNode[] = [
             typeName: "部位",
             HPP456_design: "122",
             HPP456_actual: "666",
-            C25_design: "100",
-            C25_actual: "90",
-            PO425_design: "200",
-            PO425_actual: "180",
+            HPP123_design: '1212',
+            HPP123_actual: '1212',
+            HPP555_design: '555',
+            HPP555_actual: '555',
+            C25_design: "300",
+            C25_actual: "250",
+            PO425_design: "400",
+            PO425_actual: "350",
           },
         ],
       },
@@ -266,10 +282,14 @@ export const workingPointTree: DataNode[] = [
             typeName: "部位",
             HPP456_design: "122",
             HPP456_actual: "666",
-            C25_design: "100",
-            C25_actual: "90",
-            PO425_design: "200",
-            PO425_actual: "180",
+            HPP123_design: '1212',
+            HPP123_actual: '1212',
+            HPP555_design: '555',
+            HPP555_actual: '555',
+            C25_design: "300",
+            C25_actual: "250",
+            PO425_design: "400",
+            PO425_actual: "350",
           },
           {
             key: `2-2-2`,
@@ -277,10 +297,14 @@ export const workingPointTree: DataNode[] = [
             typeName: "部位",
             HPP456_design: "122",
             HPP456_actual: "666",
-            C25_design: "100",
-            C25_actual: "90",
-            PO425_design: "200",
-            PO425_actual: "180",
+            HPP123_design: '1212',
+            HPP123_actual: '1212',
+            HPP555_design: '555',
+            HPP555_actual: '555',
+            C25_design: "300",
+            C25_actual: "250",
+            PO425_design: "400",
+            PO425_actual: "350",
           },
         ],
       },
@@ -303,10 +327,14 @@ export const workingPointTree: DataNode[] = [
             typeName: "部位",
             HPP456_design: "122",
             HPP456_actual: "666",
-            C25_design: "100",
-            C25_actual: "90",
-            PO425_design: "200",
-            PO425_actual: "180",
+            HPP123_design: '1212',
+            HPP123_actual: '1212',
+            HPP555_design: '555',
+            HPP555_actual: '555',
+            C25_design: "300",
+            C25_actual: "250",
+            PO425_design: "400",
+            PO425_actual: "350",
           },
           {
             key: `3-1-2`,
@@ -314,52 +342,17 @@ export const workingPointTree: DataNode[] = [
             typeName: "部位",
             HPP456_design: "122",
             HPP456_actual: "666",
-            C25_design: "100",
-            C25_actual: "90",
-            PO425_design: "200",
-            PO425_actual: "180",
+            HPP123_design: '1212',
+            HPP123_actual: '1212',
+            HPP555_design: '555',
+            HPP555_actual: '555',
+            C25_design: "300",
+            C25_actual: "250",
+            PO425_design: "400",
+            PO425_actual: "350",
           },
         ],
       },
     ],
   },
 ];
-
-/**
- * 根据节点 ID 查找其所有的子节点和孙节点的 ID
- * @param nodes - 树状数据节点
- * @param targetId - 要查找的节点 ID
- * @returns - 找到的所有子节点和孙节点的 ID
- */
-export const findAllChildIds = (nodes: DataNode[], targetId: string): string[] => {
-    let result: string[] = [];
-  
-    const findChildren = (currentNodes: DataNode[]) => {
-      for (const node of currentNodes) {
-        if (node.key === targetId) {
-          // 找到目标节点，收集所有孩子的 ID
-          const collectIds = (childNodes: DataNode[]) => {
-            for (const child of childNodes) {
-              result.push(child.key);
-              if (child.children) {
-                collectIds(child.children); // 递归收集孙节点 ID
-              }
-            }
-          };
-  
-          if (node.children) {
-            collectIds(node.children);
-          }
-          return; // 找到目标后，退出循环
-        }
-  
-        // 继续在子节点中查找
-        if (node.children) {
-          findChildren(node.children);
-        }
-      }
-    };
-  
-    findChildren(nodes);
-    return result;
-  };
