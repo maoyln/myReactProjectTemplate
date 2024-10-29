@@ -28,6 +28,7 @@ import TableMy from './pages/TableMy' // 我的表格
 import TextOverflow from './pages/TextOverflow/TextOverflow'; // 测试文字超出显示... 全局配置显示Iip
 import LazyLoadingDemo from './pages/LazyLoadingDemo'; // 文件懒加载
 import IntersectionObserverDemo from './pages/IntersectionObserverDemo'; // 图片懒加载
+import LazyLoadPicture from './pages/LazyLoadPicture/LazyLoadPicture'; // 图片懒加载
 
 
 // 懒加载
@@ -67,6 +68,7 @@ const AppRoutes = () => (
       <Route path='/lazyLoadingDemo' element={<LazyLoadingDemo />}></Route>
       <Route path='/intersectionObserverDemo' element={<IntersectionObserverDemo />}></Route>
       <Route path='/customLazyTreeTable' element={<CustomLazyTreeTable />}></Route>
+      <Route path='/lazyLoadPicture' element={<LazyLoadPicture />}></Route>
       
     </Routes>
   </Router>
