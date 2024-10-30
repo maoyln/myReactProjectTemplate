@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Table } from 'antd';
 import { DataNode, workingPointList, baseColumns, dynamicColumn } from './generateMockData';
-import { findAllChildIds, handleFetchData } from './utils';
+import { findAllChildIds, handleFetchData, addDefaultWidth } from './utils';
 export type { DataNode } from './generateMockData'
 
 const TreeTable: React.FC = () => {
@@ -59,7 +59,8 @@ const TreeTable: React.FC = () => {
    */
   const handleDynamicColumn = (key?: string) => {
     const currentDynamicColumn = dynamicColumn.filter(item => item.key === key);
-    return [...baseColumns, ...currentDynamicColumn ]
+    // addDefaultWidth
+    return [...baseColumns, ...addDefaultWidth(currentDynamicColumn) ]
   }
 
   return (

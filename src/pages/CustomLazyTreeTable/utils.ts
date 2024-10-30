@@ -61,3 +61,16 @@ export const findAllChildIds = (
   findChildren(nodes);
   return result;
 };
+
+export const addDefaultWidth = (columns: any, defaultWidth = 90) => {
+  return columns.map((column: any) => {
+    const newColumn = {
+      ...column,
+      width: column.width || defaultWidth,
+    };
+    if (column.children) {
+      newColumn.children = addDefaultWidth(column.children, defaultWidth);
+    }
+    return newColumn;
+  });
+};
