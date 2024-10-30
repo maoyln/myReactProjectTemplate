@@ -1,4 +1,4 @@
-import { DataNode, workingPointTree } from "./generateMockData";
+import { DataNode, workingPointTree, workingPointList } from "./generateMockData";
 
 /**
  * 获取动态数据
@@ -9,9 +9,8 @@ export const handleFetchData = (key?: string): Promise<DataNode> => {
   return new Promise((resolve) => {
     setTimeout(() => {
       const currentData = workingPointTree.find((item) => item.key === key);
-      let data: DataNode = {
-        key: "",
-        children: []
+      let data: DataNode | any = {
+        ...(workingPointList.find((item) => item.key === key)),
       };
       if (currentData) {
         data = { ...currentData };
