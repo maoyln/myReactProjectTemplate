@@ -70,7 +70,7 @@ const fixedList: string[] = ['Name', 'Age', 'Address'];
 
 // virtual
 const App: React.FC = () => (
-  <Table<DataType> columns={columns} dataSource={data} pagination={false} scroll={{ x: 5000 }} />
+  <Table<DataType> columns={columns} virtual dataSource={data} pagination={false} scroll={{ x: 5000 }} />
 );
 
 export default App;
