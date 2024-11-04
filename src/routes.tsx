@@ -31,6 +31,11 @@ import IntersectionObserverDemo from './pages/IntersectionObserverDemo'; // 图�
 import LazyLoadPicture from './pages/LazyLoadPicture/LazyLoadPicture'; // 图片懒加载
 import DocumentFragmentDemo from './pages/DocumentFragmentDemo/DocumentFragmentDemo'; // DocumentFragment 是一个轻量级的文档对象
 import MultiColumnTable from './pages/MultiColumnTable/MultiColumnTable'; // 多列table
+import MultiColumnTreeTable from './pages/MultiColumnTreeTable/MultiColumnTreeTable'; // 多列树形table
+import TreeTable from './pages/TotalMaterialVolumeLedger/components/TreeTable'; // 多列树形table
+import AgGridReactDemo from './pages/TotalMaterialVolumeLedger/AgGridReactDemo'; // 多列树形table
+import MaterialUITable from './pages/TotalMaterialVolumeLedger/MaterialUITable'; // 多列树形table
+import Handsontable from './pages/TotalMaterialVolumeLedger/Handsontable'; // Handsontable可编辑大数据表格
 
 
 // 懒加载
@@ -73,6 +78,11 @@ const AppRoutes = () => (
       <Route path='/lazyLoadPicture' element={<LazyLoadPicture />}></Route>
       <Route path='/documentFragmentDemo' element={<DocumentFragmentDemo />}></Route>
       <Route path='/multiColumnTable' element={<MultiColumnTable />}></Route>
+      <Route path='/multiColumnTreeTable' element={<MultiColumnTreeTable />}></Route>
+      <Route path='/treeTable' element={<TreeTable workPointId={'431088157479469056'} />}></Route>
+      <Route path='/agGridReactDemo' element={<AgGridReactDemo />}></Route>
+      <Route path='/materialUITable' element={<MaterialUITable />}></Route>
+      <Route path='/handsontable' element={<Handsontable />}></Route>
       
     </Routes>
   </Router>

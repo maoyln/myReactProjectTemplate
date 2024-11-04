@@ -1,0 +1,15 @@
+.group-search-tree {
+  width: 100%;
+  height: 100%;
+
+  &-select {
+    width: 100%;
+    padding-bottom: 10px;
+  }
+
+  &-tree {
+    width: 100%;
+    height: calc(100vh - 240px);
+    overflow-y: auto;
+  }
+}

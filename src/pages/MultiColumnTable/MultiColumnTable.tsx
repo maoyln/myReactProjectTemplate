@@ -17,6 +17,7 @@ interface ColumnType {
 interface DataType {
   key: number;
   [key: string]: string | number;
+  children: any;
 }
 
 const fixedList: string[] = ['Name', 'Age', 'Address'];
