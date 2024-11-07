@@ -123,7 +123,6 @@ const TreeTable: React.FC<IProps> = (props) => {
       <Table
         dataSource={state.data}
         columns={state.columns as any[]}
-        bordered
         virtual
         rowKey="key"
         loading={state.loading}
@@ -132,7 +131,7 @@ const TreeTable: React.FC<IProps> = (props) => {
           expandedRowKeys: state.expandedRowKeys,
           onExpand: handleExpand,
         }}
-        scroll={{ x: 2000, y: `calc(100vh - 100px)` }} // 根据需要设置宽度
+        scroll={{ x: 200, y:  400}} // 根据需要设置宽度
       />
     </div>
   );

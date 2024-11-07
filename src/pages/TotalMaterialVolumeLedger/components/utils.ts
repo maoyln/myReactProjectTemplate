@@ -82,3 +82,25 @@ export const addDefaultWidth = (columns: any, defaultWidth = 90) => {
     return newColumn;
   });
 };
+
+/**
+ * 递归函数获取树的所有节点个数
+ * @param node 
+ * @returns 
+ */
+export const countNodes = (node: any): number => {
+  if (!node) {
+    return 0; // 如果节点不存在，返回 0
+  }
+
+  // 计算当前节点加上所有子节点的数量
+  let count = 1; // 当前节点计数
+  if (node.children) {
+    // 如果有子节点，递归计数
+    for (const child of node.children) {
+      count += countNodes(child); // 递归调用
+    }
+  }
+
+  return count; // 返回总计数
+};

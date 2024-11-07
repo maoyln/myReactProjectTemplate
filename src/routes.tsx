@@ -35,7 +35,9 @@ import MultiColumnTreeTable from './pages/MultiColumnTreeTable/MultiColumnTreeTa
 import TreeTable from './pages/TotalMaterialVolumeLedger/components/TreeTable'; // 多列树形table
 import AgGridReactDemo from './pages/TotalMaterialVolumeLedger/AgGridReactDemo'; // 多列树形table
 import MaterialUITable from './pages/TotalMaterialVolumeLedger/MaterialUITable'; // 多列树形table
-import Handsontable from './pages/TotalMaterialVolumeLedger/Handsontable'; // Handsontable可编辑大数据表格
+import Handsontable from './pages/Handsontable/Handsontable-tree'; // Handsontable可编辑大数据表格
+import FixedSizeList from './pages/TotalMaterialVolumeLedger/FixedSizeList'; // FixedSizeList可编辑大数据表格
+import VirtualTable from './pages/TotalMaterialVolumeLedger/VirtualTable'; // VirtualTable虚拟表格
 
 
 // 懒加载
@@ -83,6 +85,8 @@ const AppRoutes = () => (
       <Route path='/agGridReactDemo' element={<AgGridReactDemo />}></Route>
       <Route path='/materialUITable' element={<MaterialUITable />}></Route>
       <Route path='/handsontable' element={<Handsontable />}></Route>
+      <Route path='/fixedSizeList' element={<FixedSizeList workPointId={'431088157479469056'} />}></Route>
+      <Route path='/virtualTable' element={<VirtualTable />}></Route>
       
     </Routes>
   </Router>

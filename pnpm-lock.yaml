@@ -17,6 +17,9 @@ dependencies:
   '@emotion/styled':
     specifier: ^11.13.0
     version: 11.13.0(@emotion/react@11.13.3)(@types/react@18.3.4)(react@18.3.1)
+  '@handsontable/react':
+    specifier: ^14.6.1
+    version: 14.6.1(handsontable@14.6.1)
   '@mui/material':
     specifier: ^6.1.6
     version: 6.1.6(@emotion/react@11.13.3)(@emotion/styled@11.13.0)(@types/react@18.3.4)(react-dom@18.3.1)(react@18.3.1)
@@ -26,6 +29,9 @@ dependencies:
   '@testing-library/user-event':
     specifier: ^13.5.0
     version: 13.5.0(@testing-library/dom@10.4.0)
+  '@types/handsontable':
+    specifier: ^0.35.0
+    version: 0.35.0
   '@types/jest':
     specifier: ^27.5.2
     version: 27.5.2
@@ -2022,6 +2028,14 @@ packages:
     resolution: {integrity: sha512-1VN6N38t5/DcjJ7y7XUYrDx1LuzvvzlrFdBdMG90Qo1xc8+LXHqbWbsTEm5Ec5gXTEbDEO53vUT35R+2COmOyg==, tarball: https://registry.npmmirror.com/@handsontable/pikaday/-/pikaday-1.0.0.tgz}
     dev: false
 
+  /@handsontable/react@14.6.1(handsontable@14.6.1):
+    resolution: {integrity: sha512-TtI3rfT/Xw30xesduAR5z9uNNrhwZvkkaEQ8PU58POJYaC0DHF3oF6Z7KA2L1TayQNBdBYt5aNQcQE+CUfutyw==, tarball: https://registry.npmmirror.com/@handsontable/react/-/react-14.6.1.tgz}
+    peerDependencies:
+      handsontable: '>=14.0.0'
+    dependencies:
+      handsontable: 14.6.1
+    dev: false
+
   /@humanwhocodes/config-array@0.11.14:
     resolution: {integrity: sha512-3T8LkOmg45BV5FICb15QQMsyUSWrQ8AygVfC7ZG32zOalnqrilm018ZVCw0eapXux8FtA33q8PSRSstjee3jSg==, tarball: https://registry.npmmirror.com/@humanwhocodes/config-array/-/config-array-0.11.14.tgz}
     engines: {node: '>=10.10.0'}
@@ -3075,6 +3089,13 @@ packages:
     resolution: {integrity: sha512-olP3sd1qOEe5dXTSaFvQG+02VdRXcdytWLAZsAq1PecU8uqQAhkrnbli7DagjtXKW/Bl7YJbUsa8MPcuc8LHEQ==, tarball: https://registry.npmmirror.com/@types/graceful-fs/-/graceful-fs-4.1.9.tgz}
     dependencies:
       '@types/node': 16.18.106
+    dev: false
+
+  /@types/handsontable@0.35.0:
+    resolution: {integrity: sha512-EuuxRXI4k4xcgyrNCAXjaO3xcfsGnGON2zSn8UG3mCD1IbwWxqKULdA/yDOG36+fKl/NOjDvjtyp3UtBJhIYGQ==, tarball: https://registry.npmmirror.com/@types/handsontable/-/handsontable-0.35.0.tgz}
+    deprecated: This is a stub types definition for handsontable (https://handsontable.com/). handsontable provides its own type definitions, so you don't need @types/handsontable installed!
+    dependencies:
+      handsontable: 14.6.1
     dev: false
 
   /@types/html-minifier-terser@6.1.0:

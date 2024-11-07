@@ -1,0 +1,21 @@
+
+
+/* .htCore th {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 75px;
+  vertical-align: middle;
+} */
+
+/* 去掉第一个 tr 的第二和第三个 th 元素的下边框 */
+.htCore thead tr:first-child th:nth-child(2),
+.htCore thead tr:first-child th:nth-child(3) {
+  border-bottom: none;
+}
+
+/* 去掉第二个 tr 的第二和第三个 th 元素的下边框 */
+.htCore thead tr:nth-child(2) th:nth-child(2),
+.htCore thead tr:nth-child(2) th:nth-child(3) {
+  border-bottom: none;
+}
