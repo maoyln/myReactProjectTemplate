@@ -35,7 +35,13 @@ import MultiColumnTreeTable from './pages/MultiColumnTreeTable/MultiColumnTreeTa
 import TreeTable from './pages/TotalMaterialVolumeLedger/components/TreeTable'; // 多列树形table
 import AgGridReactDemo from './pages/TotalMaterialVolumeLedger/AgGridReactDemo'; // 多列树形table
 import MaterialUITable from './pages/TotalMaterialVolumeLedger/MaterialUITable'; // 多列树形table
-import Handsontable from './pages/Handsontable/Handsontable-tree'; // Handsontable可编辑大数据表格
+// import Handsontable from './pages/Handsontable/Handsontable-virtualization'; // Handsontable可编辑大数据表格
+// import Handsontable from './pages/Handsontable/Handsontable'; // Handsontable可编辑大数据表格
+// import Handsontable from './pages/Handsontable/Handsontable-tree'; // Handsontable可编辑大数据表格
+import Handsontable from './pages/Handsontable/Handsontable-1108-1'; // Handsontable可编辑大数据表格
+// import Handsontable from './pages/Handsontable/Handsontable-1108-2'; // Handsontable可编辑大数据表格
+// import Handsontable from './pages/Handsontable/Handsontable-1108-3'; // Handsontable可编辑大数据表格
+// import Handsontable from './pages/Handsontable/Handsontable-1108-4'; // Handsontable可编辑大数据表格
 import FixedSizeList from './pages/TotalMaterialVolumeLedger/FixedSizeList'; // FixedSizeList可编辑大数据表格
 import VirtualTable from './pages/TotalMaterialVolumeLedger/VirtualTable'; // VirtualTable虚拟表格
 
