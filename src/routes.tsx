@@ -44,6 +44,7 @@ import Handsontable from './pages/Handsontable/Handsontable-1108-1'; // Handsont
 // import Handsontable from './pages/Handsontable/Handsontable-1108-4'; // Handsontable可编辑大数据表格
 import FixedSizeList from './pages/TotalMaterialVolumeLedger/FixedSizeList'; // FixedSizeList可编辑大数据表格
 import VirtualTable from './pages/TotalMaterialVolumeLedger/VirtualTable'; // VirtualTable虚拟表格
+import HandsonTableLeaning from './pages/HandsonTableLeaning/pages'; // handsontable系统学习
 
 
 // 懒加载
@@ -93,6 +94,7 @@ const AppRoutes = () => (
       <Route path='/handsontable' element={<Handsontable />}></Route>
       <Route path='/fixedSizeList' element={<FixedSizeList workPointId={'431088157479469056'} />}></Route>
       <Route path='/virtualTable' element={<VirtualTable />}></Route>
+      <Route path='/handsonTableLeaning' element={<HandsonTableLeaning />}></Route>
       
     </Routes>
   </Router>
