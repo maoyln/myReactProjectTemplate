@@ -1,6 +1,8 @@
 // index
 import React from 'react';
 import { useImmer } from 'use-immer';
+// import Learning from './compontents/01LearningStart'; // 开始
+import Learning from './compontents/03LearningBindingData'; // 数据绑定
 
 import './index.css';
 
@@ -14,7 +16,9 @@ const Index: React.FC<IProps> = () => {
   });
 
   return (
-    <div className='hand-son-table'>1212</div>
+    <div className='hand-son-table'>
+      <Learning />
+    </div>
   )
 };
 
