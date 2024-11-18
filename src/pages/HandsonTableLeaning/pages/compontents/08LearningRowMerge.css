@@ -1,0 +1,19 @@
+/* Handsontable 容器 */
+.hot-container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* 表头默认背景色 */
+.ht_clone_top .theadBg {
+  background-color: red;
+  font-weight: bold;
+  height: 35px;
+  line-height: 35px;
+  color: white;
+}
+
+/* 表头选中样式 */
+.ht_clone_top .theadBg.selected {
+  background-color: yellow;
+}

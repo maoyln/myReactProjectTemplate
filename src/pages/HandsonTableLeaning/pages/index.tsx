@@ -2,7 +2,8 @@
 import React from 'react';
 import { useImmer } from 'use-immer';
 // import Learning from './compontents/01LearningStart'; // 开始
-import Learning from './compontents/03LearningBindingData'; // 数据绑定
+// ...
+import Learning from './compontents/08LearningRowMerge';
 
 import './index.css';
 

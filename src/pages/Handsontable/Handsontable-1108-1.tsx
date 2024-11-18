@@ -62,7 +62,6 @@ const flattenTreeData = (nodes: any[], level: number = 0): any[] => {
 
 let sourceDataObject = [...transformTreeKeys(workingPointTree)];
 
-console.log(generateData(100), 'generateData-1212');
 let nestedHeaders = transformTreeData1(generateData(100)).map((item: any, index: number) => {
   if (index === 0) {
     return [{label: '工程部位', colspan: 1, rowspan: 3}, {label: '工点', colspan: 1, rowspan: 3}, ...item]

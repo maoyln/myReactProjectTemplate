@@ -29,11 +29,11 @@ const App = () => {
 
       // 02
       // // Array类型
-      // data: [
-      //   { id: 1, name: {first: 'Ted', last: 'Right'}, address: '' },
-      //   { id: 2, address: '地址' },// HOT will create missing properties on demand
-      //   { id: 3, name: {first: 'Joan', last: 'Well'}, address: '' }
-      // ],
+      data: [
+        { id: 1, name: {first: 'Ted', last: 'Right'}, address: '', address12: '附加字段' },
+        { id: 2, address: '地址' },// HOT will create missing properties on demand
+        { id: 3, name: {first: 'Joan', last: 'Well'}, address: '' }
+      ],
       // // 于上述Array类型配合使用
       // columns: function(column) {
       //   let columnMeta: any = {};
@@ -53,18 +53,18 @@ const App = () => {
       //   return columnMeta;
       // },
 
-      // 03 自定义列
-      columns: [
-        { data: 'id' },
-        { data: 'name.first' },
-        { data: 'name.last' },
-        { data: 'address' }
-      ],
+      // 03 自定义列，与dataSchema相比较，columns为主要顺序结构
+      // columns: [
+      //   { data: 'id' },
+      //   { data: 'name.first' },
+      //   { data: 'name.last' },
+      //   { data: 'address' }
+      // ],
 
 
       // 04 控数据
-      data: [],
-      dataSchema: { id: null, name: { first: null, last: null }, address: null },
+      // data: [],
+      dataSchema: { name: { first: null, last: null }, address: null, id: null,  }, // 使用这个字段可以确定数据的对应字段
       startRows: 5, // 开始行。仅仅在没有data属性的时候有效，会显示空的5行
       startCols: 5, // 开始列。仅仅在没有data属性的时候有效，会显示空的5列
       height: '600px',

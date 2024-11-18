@@ -3,3 +3,177 @@
   width: 100%;
   padding: 30px;
 }
+
+.ht__active_highlight {
+  background-color: red;
+}
+
+.is-readOnly {
+  background-color: red !important;
+}
+
+thead tr td {
+  overflow: hidden !important;
+  font-size: 14px !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+
+  &:hover {
+    text-overflow: inherit !important;
+    overflow: visible !important;
+    white-space: pre-line !important;
+  }
+}
+
+tbody tr td {
+  overflow: hidden !important;
+  font-size: 14px !important;
+  white-space: nowrap !important;
+  color: inherit !important;
+  text-overflow: ellipsis !important;
+
+  /* &:hover {
+    text-overflow: inherit !important;
+    overflow: visible !important;
+    white-space: pre-line !important;
+  } */
+}
+
+thead tr:first-child {
+  th:nth-child(1),
+  th:nth-child(2) {
+    border-bottom: 1px solid transparent !important;
+  }
+}
+
+/* 确保表头单元格内容垂直居中 */
+/* th {
+  vertical-align: middle;
+  text-align: center;
+} */
+
+/* thead tr {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+}
+
+th div.relative {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+} */
+
+/* th .colHeader {
+  display: inline-block;
+  text-align: center;
+} */
+
+.aaaa {
+  background-color: red !important;
+}
+
+/* thead tr:first-child {
+  th:nth-child(1),
+  th:nth-child(2) {
+
+    border-bottom: 1px solid transparent !important;
+    color: red !important;
+    background-color: red !important;
+  }
+}
+
+
+thead tr:first-child {
+  th:nth-child(1),
+  th:nth-child(2) {
+
+    border-bottom: 1px solid transparent !important;
+    color: red !important;
+    background-color: red !important;
+  }
+} */
+
+/* 只处理固定表头 */
+
+.ht_clone_top_left_corner {
+  .wtHolder {
+    .wtHider {
+      .wtSpreader {
+        .htCore {
+          thead tr:nth-child(2) {
+            th {
+              height: 24px;
+              position: relative !important;
+              top: -26px;
+              .relative {
+                height: 100%;
+                span {
+                  height: 24px;
+                  line-height: 24px;
+                  display: inline-block;
+                }
+              }
+            }
+            th:nth-child(1),
+            th:nth-child(2),
+            th:nth-child(3) {
+              height: 100%;
+              position: relative !important;
+              top: -26px;
+              .relative {
+                height: 100%;
+                span {
+                  height: 48px;
+                  line-height: 48px;
+                  display: inline-block;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.ht_clone_top {
+  .wtHolder {
+    .wtHider {
+      .wtSpreader {
+        table.htCore {
+          thead tr:nth-child(2) {
+            th {
+              height: 25px !important;
+              position: relative !important;
+              top: 0;
+              .relative {
+                height: 100%;
+                span {
+                  height: 25px;
+                  line-height: 25px;
+                  display: inline-block;
+                }
+              }
+            }
+            th:nth-child(1),
+            th:nth-child(2),
+            th:nth-child(3) {
+              height: 52px;
+              position: relative !important;
+              top: -26px;
+              .relative {
+                height: 100%;
+                span {
+                  height: 48px;
+                  line-height: 48px;
+                  display: inline-block;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
