@@ -3,7 +3,7 @@ import React from 'react';
 import { useImmer } from 'use-immer';
 // import Learning from './compontents/01LearningStart'; // 开始
 // ...
-import Learning from './compontents/08LearningRowMerge';
+import Learning from './compontents/09LearningSummary';
 
 import './index.css';
 
