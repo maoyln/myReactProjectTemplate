@@ -41,9 +41,9 @@ import MaterialUITable from './pages/TotalMaterialVolumeLedger/MaterialUITable';
 // import Handsontable from './pages/Handsontable/Handsontable-1108-1'; // Handsontable可编辑大数据表格
 // import Handsontable from './pages/Handsontable/Handsontable-1108-2'; // Handsontable可编辑大数据表格
 // import Handsontable from './pages/Handsontable/Handsontable-1108-3'; // Handsontable可编辑大数据表格
-import Handsontable from './pages/Handsontable/Handsontable-1108-5'; // Handsontable可编辑大数据表格
-import FixedSizeList from './pages/TotalMaterialVolumeLedger/FixedSizeList'; // FixedSizeList可编辑大数据表格
-import VirtualTable from './pages/TotalMaterialVolumeLedger/VirtualTable'; // VirtualTable虚拟表格
+// import Handsontable from './pages/Handsontable/Handsontable-1108-5'; // Handsontable可编辑大数据表格
+// import FixedSizeList from './pages/TotalMaterialVolumeLedger/FixedSizeList'; // FixedSizeList可编辑大数据表格
+// import VirtualTable from './pages/TotalMaterialVolumeLedger/VirtualTable'; // VirtualTable虚拟表格
 import HandsonTableLeaning from './pages/HandsonTableLeaning/pages'; // handsontable系统学习
 
 
@@ -91,9 +91,9 @@ const AppRoutes = () => (
       <Route path='/treeTable' element={<TreeTable workPointId={'431088157479469056'} />}></Route>
       <Route path='/agGridReactDemo' element={<AgGridReactDemo />}></Route>
       <Route path='/materialUITable' element={<MaterialUITable />}></Route>
-      <Route path='/handsontable' element={<Handsontable />}></Route>
+      {/* <Route path='/handsontable' element={<Handsontable />}></Route>
       <Route path='/fixedSizeList' element={<FixedSizeList workPointId={'431088157479469056'} />}></Route>
-      <Route path='/virtualTable' element={<VirtualTable />}></Route>
+      <Route path='/virtualTable' element={<VirtualTable />}></Route> */}
       <Route path='/handsonTableLeaning' element={<HandsonTableLeaning />}></Route>
       
     </Routes>

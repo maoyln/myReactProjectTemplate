@@ -7,7 +7,7 @@ const App: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [selectedColumn, setSelectedColumn] = useState<number | null>(null);
 
-  const data = Handsontable.helper.createSpreadsheetData(20, 20); // 示例数据
+  const data = Handsontable.helper.createSpreadsheetData(200, 200); // 示例数据
 
   // 表头配置
   const headers = [
@@ -24,10 +24,11 @@ const App: React.FC = () => {
         colHeaders: false, // 不显示默认表头
         rowHeaders: true,
         width: "100%",
-        height: "auto",
+        height: "900px",
         licenseKey: "non-commercial-and-evaluation",
         colWidths: columnWidths, // 设置列宽
         manualColumnResize: true, // 支持拖拽列宽
+        fixedColumnsLeft:2,
         afterSelection: (_, col) => {
           setSelectedColumn(col); // 选中列
         },
