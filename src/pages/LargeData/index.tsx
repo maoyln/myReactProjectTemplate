@@ -35,11 +35,13 @@ const App: React.FC = () => {
       const depth = 6; // 树的深度
       const nodesPerLevel = 5; // 每层节点数
 
+      console.log('发送获取数据指令----01');
       // 发送消息给 Worker
       workerRef.current.postMessage({ depth, nodesPerLevel, startId: 0 });
 
       // 监听 Worker 返回的数据
       workerRef.current.onmessage = (e) => {
+        console.log('接收数据----02');
         const data = e.data;
         setTreeData(data);
         setLoading(false);
