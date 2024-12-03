@@ -45,7 +45,7 @@ import MaterialUITable from './pages/TotalMaterialVolumeLedger/MaterialUITable';
 // import FixedSizeList from './pages/TotalMaterialVolumeLedger/FixedSizeList'; // FixedSizeList可编辑大数据表格
 // import VirtualTable from './pages/TotalMaterialVolumeLedger/VirtualTable'; // VirtualTable虚拟表格
 import HandsonTableLeaning from './pages/HandsonTableLeaning/pages'; // handsontable系统学习
-
+import LargeData from './pages/LargeData/index'; // webwork 处理大数据量
 
 // 懒加载
 const Dashboard = React.lazy(() => import('./pages/Dashboard'));
@@ -95,6 +95,7 @@ const AppRoutes = () => (
       <Route path='/fixedSizeList' element={<FixedSizeList workPointId={'431088157479469056'} />}></Route>
       <Route path='/virtualTable' element={<VirtualTable />}></Route> */}
       <Route path='/handsonTableLeaning' element={<HandsonTableLeaning />}></Route>
+      <Route path='/largeData' element={<LargeData />}></Route>
       
     </Routes>
   </Router>
