@@ -47,6 +47,7 @@ import MaterialUITable from './pages/TotalMaterialVolumeLedger/MaterialUITable';
 import HandsonTableLeaning from './pages/HandsonTableLeaning/pages'; // handsontable系统学习
 import LargeData01 from './pages/LargeData/Demo01/index'; // webwork 处理大数据量
 import LargeData02 from './pages/LargeData/Demo02/index'; // webwork 处理大数据量
+import LargeData03 from './pages/LargeData/Demo03/index'; // webwork 处理大数据量
 
 // 懒加载
 const Dashboard = React.lazy(() => import('./pages/Dashboard'));
@@ -98,6 +99,7 @@ const AppRoutes = () => (
       <Route path='/handsonTableLeaning' element={<HandsonTableLeaning />}></Route>
       <Route path='/largeData01' element={<LargeData01 />}></Route>
       <Route path='/largeData02' element={<LargeData02 />}></Route>
+      <Route path='/largeData03' element={<LargeData03 />}></Route>
       
     </Routes>
   </Router>
