@@ -44,11 +44,11 @@ const generateTreeData = (depth: number = 6, nodesPerLevel: number = 5, startId:
 // 监听主线程消息，开始生成树形数据
 // eslint-disable-next-line no-restricted-globals
 self.onmessage = (e) => {
-  console.log('接收获取数据指令，开始生成数据----03');
+  console.log('接收获取数据指令，开始生成数据----(执行顺序02)');
   const { depth, nodesPerLevel, startId } = e.data;
   const treeData = generateTreeData(depth, nodesPerLevel, startId);
   // 完成后将数据传回主线程
-  console.log('生成数据发送给UI层渲染----04');
+  console.log('生成数据发送给UI层渲染----(执行顺序03)');
   // eslint-disable-next-line no-restricted-globals
   self.postMessage(treeData);
 };
