@@ -16,9 +16,6 @@ const App: React.FC = () => {
   // 初始化 Web Worker
   useEffect(() => {
     if (typeof Worker !== 'undefined') {
-
-      console.log(import.meta.url, 'import.meta.url');
-      console.log(import.meta.url, 'import.meta.url');
       workerRef.current = new Worker(new URL('./worker.ts', import.meta.url));
     } else {
       console.error('Your browser does not support Web Workers');
@@ -43,8 +40,6 @@ const App: React.FC = () => {
 
       // 监听 Worker 返回的数据
       workerRef.current.onmessage = (e) => {
-
-      console.log(e.data);
         const data = e.data;
         setTreeData(data);
         setLoading(false);

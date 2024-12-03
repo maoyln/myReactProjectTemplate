@@ -45,7 +45,6 @@ const generateTreeData = (depth: number = 6, nodesPerLevel: number = 5, startId:
 // eslint-disable-next-line no-restricted-globals
 self.onmessage = (e) => {
   const { depth, nodesPerLevel, startId } = e.data;
-
   const treeData = generateTreeData(depth, nodesPerLevel, startId);
   // 完成后将数据传回主线程
   // eslint-disable-next-line no-restricted-globals
