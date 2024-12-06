@@ -1,9 +1,10 @@
 import React, { useState, useRef } from 'react';
 import ReactDOM from 'react-dom';
 import { Button } from 'antd';
-import { HotTable } from '@handsontable/react';
+import { HotTable, HotColumn } from '@handsontable/react';
 import Handsontable from 'handsontable';
-import '../index.css'
+import "handsontable/dist/handsontable.full.css";
+// import '../index.css'
 
 const App = () => {
   const hotTableRef = useRef<any>(null);
@@ -19,7 +20,7 @@ const App = () => {
       // ],
     // dataSchema: { name: { first: null, last: null }, address: null, id: null,  }, // 使用这个字段可以确定数据的对应字段
     contextMenu: true,
-    nestedHeaders: [['','','','4','5'], ['1','2','3','4','5']],
+    // nestedHeaders: [['','','','4','5'], ['1','2','3','4','5']],
 
     allowInsertColumn: true, // 允许插入列 ， 需要配置contextMenu：true
     // allowInsertRow: true, // 允许插入行 ， 需要配置contextMenu：true
@@ -149,7 +150,7 @@ const App = () => {
         autoWrapRow={true}
         autoWrapCol={true}
 
-        fixedColumnsLeft={2}
+        // fixedColumnsLeft={2}
         // 设置固定单元格
         // cell={
         //   [{
@@ -166,7 +167,26 @@ const App = () => {
         //   }]
         // }
         // 遍历设置所有个单元格
-        cells = {
+        // cells = {
+        //   function(row, col, prop) {
+        //     var cellProperties: any = {};
+
+        //     console.log('start ----------');
+        //     console.log(row, 'row');
+        //     console.log(col, 'col');
+        //     console.log(prop, 'prop');  // 该单元格的属性
+        //     console.log('end ----------');
+            
+        //     if (row === 0 && col === 0) {
+        //       cellProperties.readOnly = true; // 第一行第一列，设置只读
+        //     }
+        
+        //     return cellProperties;
+        //   }
+        // }
+        
+      >
+        <HotColumn cells = {
           function(row, col, prop) {
             var cellProperties: any = {};
 
@@ -182,9 +202,11 @@ const App = () => {
         
             return cellProperties;
           }
-        }
-        
-      />
+        } title='名称' data={'name.first'} > 
+        </HotColumn>
+        <HotColumn title='姓名' data={'name.last'}  />
+        <HotColumn title='地址' data={'address12'}  />
+      </HotTable>
     </div>
   );
 }

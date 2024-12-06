@@ -69,28 +69,31 @@ const ExampleComponent = () => {
       <div style={{height: '100px'}}>
         1212
       </div>
-      <HotTable
-        data={sourceDataObject}
-        preventOverflow="horizontal"
-        rowHeaders={true}
-        colHeaders={['Category', 'Artist', 'Title', 'Album', 'Label','Category1', 'Artist1', 'Title1', 'Album1', 'Label1','Category2', 'Artist2', 'Title2', 'Album2', 'Label2']}
-        nestedHeaders={nestedHeaders}
-        nestedRows={true}
-        contextMenu={true}
-        fixedColumnsLeft={2}
-        colWidths={200}
-        bindRowsWithHeaders={true}
-        autoWrapRow={true}
-        autoWrapCol={true}
-        height="calc(100vh - 100px)"
-        // renderAllRows={true}
-        // readOnly
-        afterOnCellMouseDown={handleCellClick} // 点击事件
-        afterScrollVertically={() => {console.log(111)}}
-        afterChange={(change) => {console.log(change);}} // 该方法可以动态修改值
-  
-        licenseKey="9c354-55bab-4ae31-d4e38-ab404"
-      />
+      {
+        sourceDataObject.length &&
+        <HotTable
+          data={sourceDataObject}
+          preventOverflow="horizontal"
+          rowHeaders={true}
+          colHeaders={['Category', 'Artist', 'Title', 'Album', 'Label','Category1', 'Artist1', 'Title1', 'Album1', 'Label1','Category2', 'Artist2', 'Title2', 'Album2', 'Label2']}
+          nestedHeaders={nestedHeaders}
+          nestedRows={true}
+          contextMenu={true}
+          fixedColumnsLeft={2}
+          colWidths={200}
+          bindRowsWithHeaders={true}
+          autoWrapRow={true}
+          autoWrapCol={true}
+          height="calc(100vh - 100px)"
+          // renderAllRows={true}
+          // readOnly
+          afterOnCellMouseDown={handleCellClick} // 点击事件
+          afterScrollVertically={() => {console.log(111)}}
+          afterChange={(change) => {console.log(change);}} // 该方法可以动态修改值
+    
+          licenseKey="9c354-55bab-4ae31-d4e38-ab404"
+        />
+      }
 
     </div>
   );

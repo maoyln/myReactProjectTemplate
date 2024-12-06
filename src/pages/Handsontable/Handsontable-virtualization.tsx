@@ -16,6 +16,7 @@ const data = new Array(1000) // number of rows
 
 const ExampleComponent = () => {
   return (
+    data.length > 0 &&
     <HotTable
       data={data}
       colWidths={100}

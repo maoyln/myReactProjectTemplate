@@ -444,26 +444,27 @@ const ExampleComponent = () => {
   };
 
   return (
-    <HotTable
-      data={sourceDataObject}
-      // preventOverflow="horizontal"  // 需要注释掉，不然不会触发虚拟
-      rowHeaders={true}
-      colHeaders={['Category', 'Artist', 'Title', 'Album', 'Label','Category1', 'Artist1', 'Title1', 'Album1', 'Label1','Category2', 'Artist2', 'Title2', 'Album2', 'Label2']}
-      nestedHeaders={nestedHeaders}
-      nestedRows={true}
-      contextMenu={false}
-      fixedColumnsLeft={2}
-      colWidths={200}
-      bindRowsWithHeaders={true}
-      autoWrapRow={true}
-      autoWrapCol={true}
-      // height="90vh"
-      height="calc(100vh - 100px)" // 高度可以计算
-      renderAllRows={false} // 也要注释，不能全量加载，不然数据量过大会出现性能问题
-      afterOnCellMouseDown={handleCellClick} // 点击事件
-      afterChange={(change) => {console.log(change);}} // 该方法可以动态修改值
-      licenseKey="9c354-55bab-4ae31-d4e38-ab404"
-    />
+      sourceDataObject?.length&&
+      <HotTable
+        data={sourceDataObject}
+        // preventOverflow="horizontal"  // 需要注释掉，不然不会触发虚拟
+        rowHeaders={true}
+        colHeaders={['Category', 'Artist', 'Title', 'Album', 'Label','Category1', 'Artist1', 'Title1', 'Album1', 'Label1','Category2', 'Artist2', 'Title2', 'Album2', 'Label2']}
+        nestedHeaders={nestedHeaders}
+        nestedRows={true}
+        contextMenu={false}
+        fixedColumnsLeft={2}
+        colWidths={200}
+        bindRowsWithHeaders={true}
+        autoWrapRow={true}
+        autoWrapCol={true}
+        // height="90vh"
+        height="calc(100vh - 100px)" // 高度可以计算
+        renderAllRows={false} // 也要注释，不能全量加载，不然数据量过大会出现性能问题
+        afterOnCellMouseDown={handleCellClick} // 点击事件
+        afterChange={(change) => {console.log(change);}} // 该方法可以动态修改值
+        licenseKey="9c354-55bab-4ae31-d4e38-ab404"
+      />
   );
 };
 
