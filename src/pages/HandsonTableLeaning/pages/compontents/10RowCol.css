@@ -1,0 +1,23 @@
+/* 鼠标悬停行背景色 */
+.handsontable .hover-row td {
+  background-color: #f0f8ff !important; /* 浅蓝色 */
+}
+
+/* 行和列背景色 */
+.handsontable .selected-row {
+  background-color: lightgreen !important; /* 浅绿色 */
+}
+
+.handsontable .selected-col {
+  background-color: lightgreen !important; /* 浅绿色 */
+}
+
+/* 当前选中单元格背景色 */
+.handsontable .selected-cell {
+  background-color: darkgreen !important; /* 深绿色 */
+}
+
+/* 叶子节点背景色 */
+.handsontable .htLeaf td {
+  background-color: #ffffe0 !important; /* 浅黄色 */
+}
