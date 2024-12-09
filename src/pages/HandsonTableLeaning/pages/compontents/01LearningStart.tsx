@@ -48,6 +48,39 @@ const App = () => {
   //   }
   // };
 
+
+
+  // // 选中的单元格横向纵向背景色
+  // const handleSelection = (row, col, row2, col2) => {
+  //   const hotInstance = hotTableComponent.current.hotInstance;
+
+  //   // Clear any previous custom styles
+  //   hotInstance.view.wt.wtTable.TBODY.querySelectorAll('td').forEach((cell) => {
+  //     cell.style.backgroundColor = '';
+  //   });
+
+  //   // Highlight selected row and column
+  //   if (row >= 0 && col >= 0) {
+  //     for (let i = 0; i < hotInstance.countCols(); i++) {
+  //       const rowCell = hotInstance.getCell(row, i);
+  //       if (rowCell) rowCell.style.backgroundColor = 'lightgreen';
+  //     }
+  //     for (let j = 0; j < hotInstance.countRows(); j++) {
+  //       const colCell = hotInstance.getCell(j, col);
+  //       if (colCell) colCell.style.backgroundColor = 'lightgreen';
+  //     }
+  //   }
+  // };
+
+  // const handleDeselect = () => {
+  //   const hotInstance = hotTableComponent.current.hotInstance;
+
+  //   // Reset all cell styles
+  //   hotInstance.view.wt.wtTable.TBODY.querySelectorAll('td').forEach((cell) => {
+  //     cell.style.backgroundColor = '';
+  //   });
+  // };
+
   return (
     <div>
       <div className="controllers">
@@ -81,6 +114,9 @@ const App = () => {
         ref={hotTableComponent}
         // afterOnCellMouseOver={handleMouseOver}
         // afterOnCellMouseOut={handleMouseOut}
+
+        // afterSelection={handleSelection}
+        // afterDeselect={handleDeselect}
         settings={settings}/>
     </div>
   );
