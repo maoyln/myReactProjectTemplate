@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import ReactDOM from 'react-dom';
 import { HotTable } from '@handsontable/react';
 import Handsontable from 'handsontable';
 
 const App = () => {
+  const hotTableComponent = useRef<HotTable>(null);
+
   const [settings, setSettings] = useState(() => {
     const initialState = {
       data: Handsontable.helper.createSpreadsheetData(15, 20),
@@ -20,6 +22,31 @@ const App = () => {
       [setting]: states[event.target.checked ? 1 : 0],
     }))
   }
+
+  // const handleMouseOver = (event: any, coords: any) => {
+  //   if (hotTableComponent) {
+  //     const hotInstance = hotTableComponent?.current?.hotInstance;
+  //     if (coords.row >= 0) {
+  //       // Highlight the row
+  //       if (hotInstance) {
+  //         for (let col = 0; col < hotInstance?.countCols?.(); col++) {
+  //           hotInstance?.getCell?.(coords.row, col)?.style?.backgroundColor = 'lightblue';
+  //         }
+  //       }
+  //     }
+
+  //   }
+  // }
+
+  // const handleMouseOut = (event: any, coords: any) => {
+  //   const hotInstance = hotTableComponent.current.hotInstance;
+  //   if (coords.row >= 0) {
+  //     // Reset the row background color
+  //     for (let col = 0; col < hotInstance.countCols(); col++) {
+  //       hotInstance.getCell(coords.row, col).style.backgroundColor = '';
+  //     }
+  //   }
+  // };
 
   return (
     <div>
@@ -48,8 +75,13 @@ const App = () => {
         </label>
         <br/>
       </div>
+      
 
-      <HotTable settings={settings}/>
+      <HotTable
+        ref={hotTableComponent}
+        // afterOnCellMouseOver={handleMouseOver}
+        // afterOnCellMouseOut={handleMouseOut}
+        settings={settings}/>
     </div>
   );
 }
