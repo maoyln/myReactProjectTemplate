@@ -48,8 +48,6 @@ const App = () => {
   //   }
   // };
 
-
-
   // // 选中的单元格横向纵向背景色
   // const handleSelection = (row, col, row2, col2) => {
   //   const hotInstance = hotTableComponent.current.hotInstance;
@@ -63,11 +61,17 @@ const App = () => {
   //   if (row >= 0 && col >= 0) {
   //     for (let i = 0; i < hotInstance.countCols(); i++) {
   //       const rowCell = hotInstance.getCell(row, i);
-  //       if (rowCell) rowCell.style.backgroundColor = 'lightgreen';
+  //       if (rowCell) rowCell.style.backgroundColor = 'lightgreen'; // Row background
   //     }
   //     for (let j = 0; j < hotInstance.countRows(); j++) {
   //       const colCell = hotInstance.getCell(j, col);
-  //       if (colCell) colCell.style.backgroundColor = 'lightgreen';
+  //       if (colCell) colCell.style.backgroundColor = 'lightgreen'; // Column background
+  //     }
+
+  //     // Highlight the currently selected cell
+  //     const currentCell = hotInstance.getCell(row, col);
+  //     if (currentCell) {
+  //       currentCell.style.backgroundColor = 'darkgreen'; // Selected cell background
   //     }
   //   }
   // };
