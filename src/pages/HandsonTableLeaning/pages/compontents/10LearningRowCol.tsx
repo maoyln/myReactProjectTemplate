@@ -1,32 +1,12 @@
 import React, { useRef } from 'react';
 import Handsontable from 'handsontable';
 import { HotTable } from '@handsontable/react';
+import { data } from './constant';
 import 'handsontable/dist/handsontable.full.min.css';
 import './10RowCol.css'; // 引入自定义样式
 
-// 工具函数：生成随机数据
-const generateData = (rows: number, columns: number): any[][] => {
-  const data: any[][] = [];
-  for (let i = 0; i < rows; i++) {
-    const row: any[] = [];
-    for (let j = 0; j < columns; j++) {
-      row.push(j === 0 ? `Row ${i + 1}` : Math.floor(Math.random() * 100)); // 第一列显示行号
-    }
-    data.push(row);
-  }
-  return data;
-};
-
 const App: React.FC = () => {
   const hotTableRef = useRef<HotTable>(null);
-
-  const rowCount = 1000; // 数据行数
-  const colCount = 10; // 数据列数
-  const data = generateData(rowCount, colCount);
-
-  const colHeaders = Array.from({ length: colCount }, (_, i) =>
-    i === 0 ? 'Row ID' : `Col ${i}`
-  );
 
   // 鼠标悬停行
   const handleMouseOver = (event: MouseEvent) => {
@@ -71,11 +51,19 @@ const App: React.FC = () => {
     hotInstance.getCell(row, col)?.classList.add('selected-cell');
   };
 
+    // 渲染行头：添加树状结构
+    const renderRowHeaders = (index: number, TH: HTMLElement | any) => {
+      const text = document.createTextNode(String(index + 1));
+      TH.removeChild(TH.firstChild);
+      TH.appendChild(text);
+    };
+
   return (
     <HotTable
       ref={hotTableRef}
       data={data}
-      colHeaders={colHeaders}
+      nestedRows={true}
+      // afterGetRowHeader={renderRowHeaders}
       rowHeaders={true}
       width="800"
       height="600"

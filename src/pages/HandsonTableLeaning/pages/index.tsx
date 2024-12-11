@@ -5,7 +5,7 @@ import { useImmer } from 'use-immer';
 // ...
 // import Learning from './compontents/07LearningVirtualization';
 // import Learning from './compontents/09CustomFilter/index';
-import Learning from './compontents/11LearningRowCol';
+import Learning from './compontents/10LearningRowCol';
 
 import './index.css';
 
