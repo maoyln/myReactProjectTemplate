@@ -199,10 +199,6 @@ const TreeTable: React.FC = () => {
     // 初始化 Handsontable 的树状结构
     if (tableRef.current) {
       const hotInstance: any = tableRef.current.hotInstance;
-
-      // 记录当前展开的行
-      const currentExpandedRows = new Set(expandedRows);
-
       // 更新设置
       hotInstance.updateSettings({
         nestedRows: true,
@@ -255,9 +251,16 @@ const TreeTable: React.FC = () => {
         afterOnCellMouseDown={(event, coords, td) => {
           const { row, col } = coords;
           if (row >= 0 && col >= 0) {
-            const rowData: any = tableRef.current?.hotInstance?.getSourceDataAtRow(row);
+            // const rowData: any = tableRef.current?.hotInstance?.getSourceDataAtRow(row);
             const colProp: any =  (tableRef.current?.hotInstance?.getSettings()?.columns as any)?.[col]?.data; // 当前列对应的key
             if (colProp.toLowerCase().includes("value")) {
+              const physicalRow = tableRef.current?.hotInstance?.toPhysicalRow(row);
+              console.log(row, 'row');
+              console.log(physicalRow, 'physicalRow');
+              // const rowData: any = tableRef.current?.hotInstance?.getSourceData(physicalRow);
+              
+              const rowData = getRowDataByCoords(tableRef.current?.hotInstance, row)
+              console.log(rowData, 'rowData---1212');
               const value = rowData?.[colProp];
   
               handleCellClick(row, col, value);
