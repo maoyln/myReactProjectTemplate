@@ -132,8 +132,9 @@ const TreeTable: React.FC = () => {
     }
 
     // 条件 2: 固定列字体颜色为蓝色
-    if (col === 0) {
-      td.style.color = "blue";
+    if (col === 2) {
+      // td.style.color = "blue"; // 使用下面方法进行着色，该方法可以暂时不用
+      td.style.setProperty("color", "blue", "important"); // 确保着色成功 
       td.style.cursor = "pointer";
     }
   };
@@ -156,7 +157,7 @@ const TreeTable: React.FC = () => {
       <HotTable
         ref={tableRef}
         data={transformToTree(data)} // 转换为树状结构的数据
-        colHeaders={["Name", "Value"]}
+        // colHeaders={["Name", "Value"]}
         readOnly
         rowHeaders={true}
         colWidths={100}
