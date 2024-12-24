@@ -62,6 +62,8 @@ export const getRowDataByCoords = (hotInstance: any, visualRowIndex: any) => {
 const TreeTable: React.FC = () => {
   const [data, setData] = useState<RowData[]>(generateMockData(1000, 20));
   const [highlightedCell, setHighlightedCell] = useState<{ row: number; col: number } | null>(null);
+   // 记录展开状态
+   const [expandedRows, setExpandedRows] = useState<Set<number>>(new Set());
   const tableRef = useRef<HotTable>(null);
 
   const transformToTree = (flatData: RowData[]): any[] => {
@@ -92,6 +94,9 @@ const TreeTable: React.FC = () => {
         // 保存点击的物理行和列
         const physicalRow = hotInstance.toPhysicalRow(row);
         const physicalCol = hotInstance.toPhysicalColumn(col);
+        const collapsingUI: any = hotInstance?.getPlugin?.('nestedRows')?.collapsingUI;
+        setExpandedRows(collapsingUI?.collapsedRows as any)
+        
         setHighlightedCell({ row: physicalRow, col: physicalCol }); // 保存物理行列
       }
     }
@@ -188,19 +193,32 @@ const TreeTable: React.FC = () => {
         td.style.backgroundColor = "";  // 恢复默认背景颜色
       }
     }
-  };
-  
+  };  
 
   useEffect(() => {
     // 初始化 Handsontable 的树状结构
     if (tableRef.current) {
       const hotInstance: any = tableRef.current.hotInstance;
+
+      // 记录当前展开的行
+      const currentExpandedRows = new Set(expandedRows);
+
+      // 更新设置
       hotInstance.updateSettings({
         nestedRows: true,
         data: transformToTree(data), // 确保树状结构数据
       });
+
+      // 恢复展开状态
+      const collapsingUI: any =
+        tableRef.current?.hotInstance?.getPlugin?.(
+          'nestedRows'
+        )?.collapsingUI;
+      if (expandedRows && collapsingUI) {
+        collapsingUI?.collapseMultipleChildren?.(expandedRows);
+      }
     }
-  }, [data]);
+  }, [data, expandedRows]);
 
   return (
     <div>
