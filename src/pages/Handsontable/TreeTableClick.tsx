@@ -21,19 +21,19 @@ const generateMockData = (rowCount: number, columnCount: number): RowData[] => {
       parent: parent,
       name: `Row ${id}`,
       value: Math.random() > 0.5 ? Math.floor(Math.random() * 1000) : null,
+      text1: Math.random() > 0.5 ? Math.floor(Math.random() * 1000) : null,
       value1: Math.random() > 0.5 ? Math.floor(Math.random() * 1000) : null,
-      value2: Math.random() > 0.5 ? Math.floor(Math.random() * 1000) : null,
-      value3: Math.random() > 0.5 ? Math.floor(Math.random() * 1000) : null,
+      text2: Math.random() > 0.5 ? Math.floor(Math.random() * 1000) : null,
       value4: Math.random() > 0.5 ? Math.floor(Math.random() * 1000) : null,
-      value5: Math.random() > 0.5 ? Math.floor(Math.random() * 1000) : null,
+      text5: Math.random() > 0.5 ? Math.floor(Math.random() * 1000) : null,
       value6: Math.random() > 0.5 ? Math.floor(Math.random() * 1000) : null,
-      value7: Math.random() > 0.5 ? Math.floor(Math.random() * 1000) : null,
+      text7: Math.random() > 0.5 ? Math.floor(Math.random() * 1000) : null,
       value8: Math.random() > 0.5 ? Math.floor(Math.random() * 1000) : null,
-      value9: Math.random() > 0.5 ? Math.floor(Math.random() * 1000) : null,
+      text9: Math.random() > 0.5 ? Math.floor(Math.random() * 1000) : null,
       value10: Math.random() > 0.5 ? Math.floor(Math.random() * 1000) : null,
-      value11: Math.random() > 0.5 ? Math.floor(Math.random() * 1000) : null,
+      text11: Math.random() > 0.5 ? Math.floor(Math.random() * 1000) : null,
       value12: Math.random() > 0.5 ? Math.floor(Math.random() * 1000) : null,
-      value13: Math.random() > 0.5 ? Math.floor(Math.random() * 1000) : null,
+      text13: Math.random() > 0.5 ? Math.floor(Math.random() * 1000) : null,
       value14: Math.random() > 0.5 ? Math.floor(Math.random() * 1000) : null,
     });
     id++;
@@ -97,6 +97,48 @@ const TreeTable: React.FC = () => {
     }
   };
 
+  // const getRenderer = (
+  //   instance: Handsontable,
+  //   td: HTMLTableCellElement,
+  //   row: number,
+  //   col: number,
+  //   prop: string | number,
+  //   value: any,
+  //   cellProperties: Handsontable.CellProperties
+  // ) => {
+  //   Handsontable.renderers.TextRenderer(
+  //     instance,
+  //     td,
+  //     row,
+  //     col,
+  //     prop,
+  //     value,
+  //     cellProperties
+  //   );
+
+  //   // 获取可视行列
+  //   const hotInstance = tableRef.current?.hotInstance;
+  //   if (hotInstance && highlightedCell) {
+  //     const { row: highlightedRow, col: highlightedCol } = highlightedCell;
+  //     const visualRow = hotInstance.toVisualRow(highlightedRow);
+  //     const visualCol = hotInstance.toVisualColumn(highlightedCol);
+
+  //     // 仅修改被点击单元格背景颜色
+  //     if (visualRow === row && visualCol === col) {
+  //       td.style.backgroundColor = "yellow";
+  //     } else {
+  //       td.style.backgroundColor = ""; // 恢复默认背景颜色
+  //     }
+  //   }
+
+  //   // 条件 2: 固定列字体颜色为蓝色
+  //   if (col === 2) {
+  //     // td.style.color = "blue"; // 使用下面方法进行着色，该方法可以暂时不用
+  //     td.style.setProperty("color", "blue", "important"); // 确保着色成功 
+  //     td.style.cursor = "pointer";
+  //   }
+  // };
+
   const getRenderer = (
     instance: Handsontable,
     td: HTMLTableCellElement,
@@ -106,6 +148,7 @@ const TreeTable: React.FC = () => {
     value: any,
     cellProperties: Handsontable.CellProperties
   ) => {
+    // 默认的文本渲染
     Handsontable.renderers.TextRenderer(
       instance,
       td,
@@ -115,29 +158,38 @@ const TreeTable: React.FC = () => {
       value,
       cellProperties
     );
-
-    // 获取可视行列
+  
+    // 获取列的数据键值
+    // const columnKey = cellProperties?.column?.data;
+    const columnKey: any = cellProperties?.prop;
+  
+    // 检查列的 key 是否包含 'value' 字符串
+    if (columnKey && columnKey.toLowerCase().includes("value")) {
+      td.style.color = "blue";  // 字体颜色为蓝色
+      td.style.cursor = "pointer"; // 添加指针光标
+      td.style.fontWeight = "bold";  // 可选：加粗字体
+      
+      // 使用 !important 强制覆盖任何默认样式
+      td.style.setProperty("color", "blue", "important");
+      td.style.setProperty("cursor", "pointer", "important");
+    }
+  
+    // 处理高亮单元格背景颜色
     const hotInstance = tableRef.current?.hotInstance;
     if (hotInstance && highlightedCell) {
       const { row: highlightedRow, col: highlightedCol } = highlightedCell;
       const visualRow = hotInstance.toVisualRow(highlightedRow);
       const visualCol = hotInstance.toVisualColumn(highlightedCol);
-
-      // 仅修改被点击单元格背景颜色
+  
+      // 高亮单元格的背景颜色
       if (visualRow === row && visualCol === col) {
         td.style.backgroundColor = "yellow";
       } else {
-        td.style.backgroundColor = ""; // 恢复默认背景颜色
+        td.style.backgroundColor = "";  // 恢复默认背景颜色
       }
     }
-
-    // 条件 2: 固定列字体颜色为蓝色
-    if (col === 2) {
-      // td.style.color = "blue"; // 使用下面方法进行着色，该方法可以暂时不用
-      td.style.setProperty("color", "blue", "important"); // 确保着色成功 
-      td.style.cursor = "pointer";
-    }
   };
+  
 
   useEffect(() => {
     // 初始化 Handsontable 的树状结构
@@ -150,14 +202,12 @@ const TreeTable: React.FC = () => {
     }
   }, [data]);
 
-  console.log(highlightedCell, 'highlightedCell');
-
   return (
     <div>
       <HotTable
         ref={tableRef}
         data={transformToTree(data)} // 转换为树状结构的数据
-        // colHeaders={["Name", "Value"]}
+        colHeaders={true}
         readOnly
         rowHeaders={true}
         colWidths={100}
@@ -165,20 +215,20 @@ const TreeTable: React.FC = () => {
           { data: "id" },
           { data: "name" },
           { data: "value", renderer: getRenderer },
-          { data: "value1" },
-          { data: "value2" },
-          { data: "value3" },
-          { data: "value4" },
-          { data: "value5" },
-          { data: "value6" },
-          { data: "value7" },
-          { data: "value8" },
-          { data: "value9" },
-          { data: "value10" },
-          { data: "value11" },
-          { data: "value12" },
-          { data: "value13" },
-          { data: "value14" },
+          { data: "text1", renderer: getRenderer  },
+          { data: "value1", renderer: getRenderer },
+          { data: "text2", renderer: getRenderer  },
+          { data: "value4", renderer: getRenderer },
+          { data: "text5", renderer: getRenderer },
+          { data: "value6", renderer: getRenderer },
+          { data: "text7", renderer: getRenderer },
+          { data: "value8", renderer: getRenderer },
+          { data: "text9", renderer: getRenderer },
+          { data: "value10", renderer: getRenderer },
+          { data: "text11", renderer: getRenderer },
+          { data: "value12", renderer: getRenderer },
+          { data: "text13", renderer: getRenderer },
+          { data: "value14", renderer: getRenderer },
         ]}
         nestedRows={true} // 启用树状结构
         manualRowMove={true}
@@ -189,9 +239,8 @@ const TreeTable: React.FC = () => {
           if (row >= 0 && col >= 0) {
             const rowData: any = tableRef.current?.hotInstance?.getSourceDataAtRow(row);
             const colProp: any =  (tableRef.current?.hotInstance?.getSettings()?.columns as any)?.[col]?.data; // 当前列对应的key
-            console.log(colProp, 'colProp');
-            if (colProp === 'value') {
-              const value = rowData?.value;
+            if (colProp.toLowerCase().includes("value")) {
+              const value = rowData?.[colProp];
   
               handleCellClick(row, col, value);
             }
