@@ -255,6 +255,8 @@ const TreeTable: React.FC = () => {
     }
   }, [data, expandedRows]);
 
+  console.log(transformToTree(data), 'transformToTree(data)');
+
   return (
     <div>
       <HotTable

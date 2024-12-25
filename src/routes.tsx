@@ -42,7 +42,7 @@ import MaterialUITable from './pages/TotalMaterialVolumeLedger/MaterialUITable';
 // import Handsontable from './pages/Handsontable/Handsontable-1108-2'; // Handsontable可编辑大数据表格
 // import Handsontable from './pages/Handsontable/Handsontable-1108-3'; // Handsontable可编辑大数据表格
 // import Handsontable from './pages/Handsontable/Handsontable-1108-5'; // Handsontable可编辑大数据表格
-import Handsontable from './pages/Handsontable/TreeTableClick'; // Handsontable可编辑大数据表格
+import Handsontable from './pages/Handsontable/TreeTableClickDynamicColumns'; // Handsontable可编辑大数据表格
 // import FixedSizeList from './pages/TotalMaterialVolumeLedger/FixedSizeList'; // FixedSizeList可编辑大数据表格
 // import VirtualTable from './pages/TotalMaterialVolumeLedger/VirtualTable'; // VirtualTable虚拟表格
 

@@ -96,7 +96,8 @@ thead tr:first-child {
 
 /* 只处理固定表头 */
 
-.ht_clone_top_left_corner {
+/* 暂时注释-勿删 */
+/* .ht_clone_top_left_corner {
   .wtHolder {
     .wtHider {
       .wtSpreader {
@@ -135,9 +136,10 @@ thead tr:first-child {
       }
     }
   }
-}
+} */
 
-.ht_clone_top {
+/* 暂时注释-勿删 */
+/* .ht_clone_top {
   .wtHolder {
     .wtHider {
       .wtSpreader {
@@ -176,4 +178,4 @@ thead tr:first-child {
       }
     }
   }
-}
+} */
