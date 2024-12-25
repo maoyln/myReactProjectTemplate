@@ -10,12 +10,15 @@ const ParentComponent: React.FC = () => {
     { id: 1, name: "Alice", age: 25, address: "123 Main St" },
     { id: 2, name: "Bob", age: 30, address: "456 Elm St" },
     { id: 3, name: "Charlie", age: 35, address: "789 Oak St" },
+    { id: 4, name: "Charlie", age: 35, address: "789 Oak St" },
+    { id: 5, name: "Charlie", age: 35, address: "789 Oak St" },
   ];
 
   const columns = [
     { data: "id", type: "numeric" },
     { data: "name", type: "text" },
     { data: "age", type: "numeric" },
+    { data: "address", type: "numeric" },
   ];
 
   const colHeaders = ["ID", "Name", "Age", "address"];
@@ -59,6 +62,7 @@ const ParentComponent: React.FC = () => {
           columns={columns}
           colHeaders={colHeaders}
           rowHeaders={true}
+          colWidths={'100px'}
           height={300}
           width="100%"
         />

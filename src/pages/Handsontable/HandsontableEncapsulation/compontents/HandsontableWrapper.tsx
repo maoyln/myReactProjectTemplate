@@ -16,6 +16,7 @@ interface HandsontableWrapperProps {
   nestedRows?: boolean; // 是否启用树状结构
   height?: number | string; // 表格高度
   width?: number | string; // 表格宽度
+  colWidths?: number[] | string;
   licenseKey?: string; // Handsontable 许可证
 }
 
@@ -37,6 +38,7 @@ const HandsontableWrapper = forwardRef<HandsontableWrapperRef, HandsontableWrapp
       nestedRows = false,
       height = 400,
       width = "100%",
+      colWidths = '100px',
       licenseKey = "non-commercial-and-evaluation",
     },
     ref
@@ -96,6 +98,7 @@ const HandsontableWrapper = forwardRef<HandsontableWrapperRef, HandsontableWrapp
         rowHeaders={rowHeaders}
         readOnly={readOnly}
         nestedRows={nestedRows}
+        colWidths={colWidths}
         height={height}
         width={width}
         licenseKey={licenseKey}
