@@ -44,6 +44,7 @@ const HandsontableWrapper = forwardRef<HandsontableWrapperRef, HandsontableWrapp
     ref
   ) => {
     const hotTableRef = useRef<HotTable>(null);
+    // TODO 封装的组件适合使用useState吗？
     const [hotInstance, setHotInstance] = useState<Handsontable | null>(null);
 
     // 在组件卸载时销毁 Handsontable 实例
