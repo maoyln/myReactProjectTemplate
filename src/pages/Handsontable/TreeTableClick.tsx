@@ -1,3 +1,10 @@
+/**
+ * @description: 树状表格 
+ * 可点击列
+ * 点击单元格该单元格背景色变化（高亮），其他单元格背景色恢复
+ * 展开折叠不会影响单元格选中效果
+ * 点击单元格更新数据，展开折叠保持现状
+ */
 import React, { useRef, useState, useEffect } from "react";
 import Handsontable from "handsontable";
 import { HotTable } from "@handsontable/react";
@@ -35,6 +42,38 @@ const generateMockData = (rowCount: number, columnCount: number): RowData[] => {
       value12: Math.random() > 0.5 ? Math.floor(Math.random() * 1000) : null,
       text13: Math.random() > 0.5 ? Math.floor(Math.random() * 1000) : null,
       value14: Math.random() > 0.5 ? Math.floor(Math.random() * 1000) : null,
+
+      value0: Math.random() > 0.5 ? Math.floor(Math.random() * 1000) : null,
+      text01: Math.random() > 0.5 ? Math.floor(Math.random() * 1000) : null,
+      value01: Math.random() > 0.5 ? Math.floor(Math.random() * 1000) : null,
+      text02: Math.random() > 0.5 ? Math.floor(Math.random() * 1000) : null,
+      value04: Math.random() > 0.5 ? Math.floor(Math.random() * 1000) : null,
+      text05: Math.random() > 0.5 ? Math.floor(Math.random() * 1000) : null,
+      value06: Math.random() > 0.5 ? Math.floor(Math.random() * 1000) : null,
+      text07: Math.random() > 0.5 ? Math.floor(Math.random() * 1000) : null,
+      value08: Math.random() > 0.5 ? Math.floor(Math.random() * 1000) : null,
+      text09: Math.random() > 0.5 ? Math.floor(Math.random() * 1000) : null,
+      value010: Math.random() > 0.5 ? Math.floor(Math.random() * 1000) : null,
+      text011: Math.random() > 0.5 ? Math.floor(Math.random() * 1000) : null,
+      value012: Math.random() > 0.5 ? Math.floor(Math.random() * 1000) : null,
+      text013: Math.random() > 0.5 ? Math.floor(Math.random() * 1000) : null,
+      value014: Math.random() > 0.5 ? Math.floor(Math.random() * 1000) : null,
+
+      value00: Math.random() > 0.5 ? Math.floor(Math.random() * 1000) : null,
+      text001: Math.random() > 0.5 ? Math.floor(Math.random() * 1000) : null,
+      value001: Math.random() > 0.5 ? Math.floor(Math.random() * 1000) : null,
+      text002: Math.random() > 0.5 ? Math.floor(Math.random() * 1000) : null,
+      value004: Math.random() > 0.5 ? Math.floor(Math.random() * 1000) : null,
+      text005: Math.random() > 0.5 ? Math.floor(Math.random() * 1000) : null,
+      value006: Math.random() > 0.5 ? Math.floor(Math.random() * 1000) : null,
+      text007: Math.random() > 0.5 ? Math.floor(Math.random() * 1000) : null,
+      value008: Math.random() > 0.5 ? Math.floor(Math.random() * 1000) : null,
+      text009: Math.random() > 0.5 ? Math.floor(Math.random() * 1000) : null,
+      value0010: Math.random() > 0.5 ? Math.floor(Math.random() * 1000) : null,
+      text0011: Math.random() > 0.5 ? Math.floor(Math.random() * 1000) : null,
+      value0012: Math.random() > 0.5 ? Math.floor(Math.random() * 1000) : null,
+      text0013: Math.random() > 0.5 ? Math.floor(Math.random() * 1000) : null,
+      value0014: Math.random() > 0.5 ? Math.floor(Math.random() * 1000) : null,
     });
     id++;
   }
@@ -243,6 +282,38 @@ const TreeTable: React.FC = () => {
           { data: "value12", renderer: getRenderer },
           { data: "text13", renderer: getRenderer },
           { data: "value14", renderer: getRenderer },
+
+          { data: "value0", renderer: getRenderer },
+          { data: "text01", renderer: getRenderer  },
+          { data: "value01", renderer: getRenderer },
+          { data: "text02", renderer: getRenderer  },
+          { data: "value04", renderer: getRenderer },
+          { data: "text05", renderer: getRenderer },
+          { data: "value06", renderer: getRenderer },
+          { data: "text07", renderer: getRenderer },
+          { data: "value08", renderer: getRenderer },
+          { data: "text09", renderer: getRenderer },
+          { data: "value010", renderer: getRenderer },
+          { data: "text011", renderer: getRenderer },
+          { data: "value012", renderer: getRenderer },
+          { data: "text013", renderer: getRenderer },
+          { data: "value014", renderer: getRenderer },
+
+          { data: "value00", renderer: getRenderer },
+          { data: "text001", renderer: getRenderer  },
+          { data: "value001", renderer: getRenderer },
+          { data: "text002", renderer: getRenderer  },
+          { data: "value004", renderer: getRenderer },
+          { data: "text005", renderer: getRenderer },
+          { data: "value006", renderer: getRenderer },
+          { data: "text007", renderer: getRenderer },
+          { data: "value008", renderer: getRenderer },
+          { data: "text009", renderer: getRenderer },
+          { data: "value0010", renderer: getRenderer },
+          { data: "text0011", renderer: getRenderer },
+          { data: "value0012", renderer: getRenderer },
+          { data: "text0013", renderer: getRenderer },
+          { data: "value0014", renderer: getRenderer },
         ]}
         nestedRows={true} // 启用树状结构
         manualRowMove={true}
