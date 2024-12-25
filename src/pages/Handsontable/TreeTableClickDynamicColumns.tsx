@@ -85,7 +85,7 @@ const TreeTable: React.FC = () => {
     const columnKey: any = cellProperties?.prop;
 
     // 检查列的 key 是否包含 'value' 字符串
-    if (columnKey && (columnKey.includes("supplyAQuantity") || columnKey.includes("verificationQuantity"))) {
+    if (columnKey?.includes?.("supplyAQuantity") || columnKey?.includes?.("verificationQuantity")) {
       td.style.color = "blue";  // 字体颜色为蓝色
       td.style.cursor = "pointer"; // 添加指针光标
       td.style.fontWeight = "bold";  // 可选：加粗字体
