@@ -7,9 +7,9 @@ const ParentComponent: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(false);
 
   const initialData = [
-    { id: 1, name: "Alice", age: 25 },
-    { id: 2, name: "Bob", age: 30 },
-    { id: 3, name: "Charlie", age: 35 },
+    { id: 1, name: "Alice", age: 25, address: "123 Main St" },
+    { id: 2, name: "Bob", age: 30, address: "456 Elm St" },
+    { id: 3, name: "Charlie", age: 35, address: "789 Oak St" },
   ];
 
   const columns = [
@@ -18,7 +18,7 @@ const ParentComponent: React.FC = () => {
     { data: "age", type: "numeric" },
   ];
 
-  const colHeaders = ["ID", "Name", "Age"];
+  const colHeaders = ["ID", "Name", "Age", "address"];
 
   const handleGetData = () => {
     const data = tableRef.current?.getData();
