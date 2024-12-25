@@ -45,6 +45,7 @@ import MaterialUITable from './pages/TotalMaterialVolumeLedger/MaterialUITable';
 import Handsontable from './pages/Handsontable/TreeTableClickDynamicColumns'; // Handsontable可编辑大数据表格
 // import FixedSizeList from './pages/TotalMaterialVolumeLedger/FixedSizeList'; // FixedSizeList可编辑大数据表格
 // import VirtualTable from './pages/TotalMaterialVolumeLedger/VirtualTable'; // VirtualTable虚拟表格
+import ParentComponent from './pages/Handsontable/HandsontableEncapsulation/ParentComponent'; // 测试二次封装表格数据传输
 
 import HandsonTableLeaning from './pages/HandsonTableLeaning/pages'; // handsontable系统学习
 import LargeData01 from './pages/LargeData/Demo01/index'; // webwork 处理大数据量
@@ -102,6 +103,7 @@ const AppRoutes = () => (
       <Route path='/largeData01' element={<LargeData01 />}></Route>
       <Route path='/largeData02' element={<LargeData02 />}></Route>
       <Route path='/largeData03' element={<LargeData03 />}></Route>
+      <Route path='/parentComponent' element={<ParentComponent />}></Route>
       
     </Routes>
   </Router>
