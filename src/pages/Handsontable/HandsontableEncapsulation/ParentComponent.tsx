@@ -37,6 +37,8 @@ const ParentComponent: React.FC = () => {
     setLoading(!loading);
   }
 
+  console.log(tableRef, 'tableRef--1212');
+
   return (
     <div>
       <h1>Handsontable Wrapper Example</h1>
