@@ -170,11 +170,11 @@ const TreeTable: React.FC = () => {
           if (row >= 0 && col >= 0) {
             // const rowData: any = tableRef.current?.hotInstance?.getSourceDataAtRow(row);
             const colProp: any =  (tableRef.current?.hotInstance?.getSettings()?.columns as any)?.[col]?.data; // 当前列对应的key
-            console.log(colProp, 'colProp');
+            // console.log(colProp, 'colProp');
             if (colProp.includes('supplyAQuantity') || colProp.includes('verificationQuantity')) {
-              const physicalRow = tableRef.current?.hotInstance?.toPhysicalRow(row);
-              console.log(row, 'row');
-              console.log(physicalRow, 'physicalRow');
+              // const physicalRow = tableRef.current?.hotInstance?.toPhysicalRow(row);
+              // console.log(row, 'row');
+              // console.log(physicalRow, 'physicalRow');
               // const rowData: any = tableRef.current?.hotInstance?.getSourceData(physicalRow);
               
               // const rowData = getRowDataByCoords(tableRef.current?.hotInstance, row)
