@@ -4,6 +4,7 @@
  * 点击单元格该单元格背景色变化（高亮），其他单元格背景色恢复
  * 展开折叠不会影响单元格选中效果
  * 点击单元格更新数据，展开折叠保持现状
+ * 动态列，最新的表格
  */
 import React, { useRef, useState, useEffect } from "react";
 import Handsontable from "handsontable";
@@ -12,14 +13,6 @@ import { nestedHeaders } from './nestedHeaders';
 import { tableData } from './columnsData';
 import { columns } from './columns';
 import "handsontable/dist/handsontable.full.min.css";
-
-interface RowData {
-  id: number;
-  parent: number | null;
-  name: string;
-  value: number | null;
-  [key: string]: any;
-}
 
 /**
  * 获取当前行的完整数据对象（兼容树状结构的折叠/展开状态）
