@@ -23,6 +23,7 @@ export interface HandsontableWrapperRef {
   getData: () => any[]; // 获取表格数据
   setData: (newData: any[]) => void; // 更新表格数据
   getInstance: () => Handsontable | null; // 获取 Handsontable 实例
+  hotInstance: Handsontable | null; // 直接暴露 Handsontable 实例
 }
 
 const HandsontableWrapper = forwardRef<HandsontableWrapperRef, HandsontableWrapperProps>(
@@ -56,19 +57,16 @@ const HandsontableWrapper = forwardRef<HandsontableWrapperRef, HandsontableWrapp
       };
     }, [hotInstance]); // 只有 hotInstance 变化时才会清理
 
-    // 暴露方法给父组件
+    // 使用 useImperativeHandle 暴露方法给父组件
     useImperativeHandle(ref, () => ({
       getData: () => {
-        const hotInstance = hotTableRef.current?.hotInstance;
         return hotInstance?.getData() || [];
       },
       setData: (newData: any[]) => {
-        const hotInstance = hotTableRef.current?.hotInstance;
-        if (hotInstance) {
-          hotInstance.loadData(newData);
-        }
+        hotInstance?.loadData(newData);
       },
-      getInstance: () => hotTableRef.current?.hotInstance || null,
+      getInstance: () => hotInstance,
+      hotInstance: hotInstance, // 直接暴露 hotInstance
     }));
 
     // afterInit 生命周期钩子确保 hotInstance 已经初始化

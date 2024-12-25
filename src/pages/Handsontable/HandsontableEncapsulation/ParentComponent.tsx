@@ -39,6 +39,15 @@ const ParentComponent: React.FC = () => {
 
   console.log(tableRef, 'tableRef--1212');
 
+  const handleAccessInstance = () => {
+    const hotInstance = tableRef.current?.hotInstance;
+    if (hotInstance) {
+      console.log("Accessing Handsontable instance:", hotInstance);
+      // 使用 Handsontable 实例，例如获取某个表格单元格的数据
+      console.log(hotInstance.getDataAtCell(0, 0)); // 获取第一个单元格的数据
+    }
+  };
+
   return (
     <div>
       <h1>Handsontable Wrapper Example</h1>
@@ -54,9 +63,10 @@ const ParentComponent: React.FC = () => {
           width="100%"
         />
       }
-      <button onClick={handleGetData}>Get Data</button>
-      <button onClick={handleSetData}>Set Data</button>
-      <button onClick={handleLoading}>loading</button>
+      <button onClick={handleGetData}>获取数据</button>
+      <button onClick={handleSetData}>设置数据</button>
+      <button onClick={handleAccessInstance}>接入实例测试</button>
+      <button onClick={handleLoading}>[切换]加载中...</button>
     </div>
   );
 };
