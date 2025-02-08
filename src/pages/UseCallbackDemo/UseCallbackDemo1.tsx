@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from 'react';
 
-const UseCallbackDemo: React.FC = () => {
+const UseCallbackDemo1: React.FC = () => {
   const [count, setCount] = useState(0);
 
   // callback函数只在组件首次渲染时创建一次，即使App组件重新渲染，Counter组件也不会因为callback的改变而重新渲染。
@@ -27,4 +27,4 @@ function Counter({ count, onIncrease }: any) {
   );
 }
 
-export default UseCallbackDemo;
+export default UseCallbackDemo1;
