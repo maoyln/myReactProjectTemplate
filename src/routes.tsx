@@ -9,7 +9,7 @@ import AuthRoute from './components/AuthRoute';
 import UpdateState from './pages/UpdateState';
 import UpdateState2 from './pages/UpdateState2';
 import CreatePortalDom from './pages/reactPortalDom'; // CreatePortal
-import UseMemoDemo from './pages/UseMemoDemo'; // UseMemo
+import UseMemoDemo from './pages/useMemoDemo'; // UseMemo
 import UseCallbackDemo from './pages/UseCallbackDemo'; // UseCallbackDemo
 import UseMemoAndCallback from './pages/UseMemoAndCallback'; // UseMemoAndCallback
 import ContextMain from './pages/ContextDemo/ContextMain' // Context

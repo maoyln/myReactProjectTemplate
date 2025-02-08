@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 
-const UseMemoDemo: React.FC = () => {
+const UseMemoDemo1: React.FC = () => {
   const [value, setValue] = useState(0);
   const [trigger, setTrigger] = useState(false);
 
@@ -26,4 +26,4 @@ const UseMemoDemo: React.FC = () => {
   );
 }
 
-export default UseMemoDemo
+export default UseMemoDemo1;
