@@ -8,7 +8,7 @@ const UseCallbackDemo1: React.FC = () => {
   const callback = useCallback(() => {
     console.log('Callback called');
     setCount(count + 1)
-  }, [count]); // 此处不是正常写法，因为count有变动使用的useCallback没有依赖count而触发
+  }, [count]); // 依赖项
 
   return (
     <div>
@@ -18,7 +18,7 @@ const UseCallbackDemo1: React.FC = () => {
 }
 
 function Counter({ count, onIncrease }: any) {
-  console.log('render'); // 只重新渲染一次，哪怕count变化,Counter组件也不会因为callback的改变而重新渲染
+  console.log('render'); // 只重新渲染一次，哪怕count变化,Counter组件也不会因为callback的改变而重新渲染 ,因为上述函数使用了[count]，所以会重新渲染多次
   return (
     <div>
       <p>Count: {count}</p>
