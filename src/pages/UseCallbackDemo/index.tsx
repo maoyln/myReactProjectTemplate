@@ -2,6 +2,7 @@ import React from 'react';
 import UseCallbackDemo1 from "./UseCallbackDemo1";
 import UseCallbackDemo2 from "./UseCallbackDemo2";
 
+// useCallback(fn, [deps]) → 只在 deps 变化时才重新创建 fn。
 const UseCallbackDemo = () => {
   return (
     <React.Fragment>
