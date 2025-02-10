@@ -5,16 +5,12 @@ const UseCallbackDemo3 = () => {
 
   const handleClick = useCallback(() => {
     console.log("点击了按钮");
+    setCount((prev) => prev + 1);
   }, []);
-
-  const handleClick1 = useMemo(() => {
-    setCount(count + 1)
-  }, [count]);
 
   return (
     <div>
       {count}
-      <button onClick={() => handleClick1}>计算数量</button>
       <button onClick={handleClick}>点击</button>
     </div>
   );

@@ -8,7 +8,7 @@ const UseCallbackDemo = () => {
   return (
     <React.Fragment>
       <div>
-        <UseCallbackDemo1 />
+        {/* <UseCallbackDemo1 /> */}
       </div>
       <div>
         <UseCallbackDemo2 />
