@@ -27,19 +27,19 @@ const WarningIndex: React.FC<IProps> = (props) => {
       bg: '1',
       data: '58',
       unit: '个',
-      title: '未完成三级教育人数'
+      title: '这是第一个图标'
     },
     {
       bg: '2',
       data: '58',
       unit: '个',
-      title: '年龄预警人数'
+      title: '这是第二个图标'
     },
     {
       bg: '3',
       data: '58',
       unit: '个',
-      title: '证书即将过期及过期数'
+      title: '这是第三个图标'
     }
   ];
 
