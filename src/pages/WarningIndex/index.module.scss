@@ -1,0 +1,71 @@
+.warning-index {
+  width: 100%;
+  height: 100%;
+
+  .detail {
+    display: flex;
+    justify-content: end;
+    color: rgba($color: #fff, $alpha: 0.6);
+    font-size: 12px;
+    cursor: pointer;
+  }
+
+  .warning-index-cards {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+
+    .card {
+      width: calc(100% - 50px);
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      margin: 10px;
+
+      &-content {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        background-size: 100% 100%;
+        transform: translate(3px, 3px);
+        background-repeat: no-repeat;
+        text-align: center;
+      }
+
+      &-text-container {
+        display: flex;
+        align-items: baseline;
+        // align-items: flex-end; // 底部对齐
+        justify-content: center; // 水平居中
+      }
+
+      &-data {
+        font-size: 18px; // 数据字体变大
+        font-weight: bold;
+        margin-right: 4px; // 与单位之间的间距
+      }
+
+      &-unit {
+        font-size: 10px; // 单位字体变大
+      }
+
+      &-title {
+        font-size: 14px; // 标题字体大小
+        text-align: center;
+        margin-top: 8px;
+        height: 70px;
+        font-weight: bold;
+        width: 100%;
+      }
+    }
+  }
+}
