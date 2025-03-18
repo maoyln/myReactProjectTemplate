@@ -1,11 +1,16 @@
 .warning-index {
   width: 500px;
   height: 200px;
+  border-radius: 6px;
+  border: 1px solid #e8e6e8;
+  background-color: #88868f;
+  box-shadow: 0 0 8px 0 rgb(0 0 0 / 0.1);
+  overflow: hidden;
 
   .detail {
     display: flex;
     justify-content: end;
-    color: #1890ff;
+    color: #f2f5f7;
     font-size: 12px;
     cursor: pointer;
   }
